@@ -17,6 +17,14 @@ body{
   }
 }
 
+.login-button{
+  color: #fff;
+}
+.login-button:hover{
+  text-decoration: none;
+  color: #fff;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

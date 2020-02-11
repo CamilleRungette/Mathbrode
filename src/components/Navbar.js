@@ -121,7 +121,7 @@ class Navigbar extends React.Component{
                   <Button color="secondary" style={{fontSize:"1em"}} onClick={this.LogOut}>Se Déconnecter</Button>
                   </div>
                 ):(
-                  <Button color="secondary" style={{fontSize:"1em"}} href="/login">Se Connecter</Button>
+                  <Button color="secondary" style={{fontSize:"1em"}}><Link className="login-button" to="/login"> Se Connecter </Link></Button>
                 )}
                 </NavItem>
 
