@@ -52,7 +52,7 @@ class Dashboard extends Component {
 
   ItemSubmit(){
     let ctx = this
-    fetch(`${ip}/admins/create-item`, {
+    fetch(`http://localhost:3000/admins/create-item`, {
             method: 'POST',
             headers: {'Content-Type':'application/x-www-form-urlencoded'},
             body: `name=${this.state.CreateItemName}&price=${this.state.CreateItemPrice}&size=${this.state.CreateItemSize}&description=${this.state.CreateItemDesc}&shipping_fee=${this.state.CreateItemShipFee}&copy=1&photo=${this.state.CreateItemPhoto}&first_presentation=${this.state.CreateItemFirstPres}`
@@ -131,8 +131,8 @@ class Dashboard extends Component {
         body: data
       })
     const file = await res.json()
-    
     this.setState({CreateItemPhoto: file.secure_url})
+    console.log(this.state.CreateItemPhoto)
     this.setState({loading: false})
   }
 
@@ -154,7 +154,6 @@ class Dashboard extends Component {
   }
 
   async uploadWorkshopImage(e){
-    console.log("THE STATE =====>", this.state.loading)
     const files = e.target.files
     const data= new FormData()
     data.append('file', files[0])
@@ -168,7 +167,6 @@ class Dashboard extends Component {
     
     this.setState({CreateWorkshopPhoto: file.secure_url})
     this.setState({loading: false})
-      console.log(this.state.CreateWorkshopPhoto)
   }
 
 

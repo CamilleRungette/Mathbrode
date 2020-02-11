@@ -51,7 +51,7 @@ class Items extends Component{
 
       <Col style={{margin:"auto"}}>
           <div className="col-6" style={{ margin:"auto", display:"flex", justifyContent:"center",flexWrap:"wrap"}} >
-          <h1 style={{textAlign:"center", fontSize:"3.5em", marginTop:"0.5em"}}>La Boutique</h1>
+          <h1 style={{textAlign:"center", fontSize:"4em", marginTop:"0.5em"}}>La Boutique</h1>
           </div>
           <div style={{height:"6em"}}></div>
 
