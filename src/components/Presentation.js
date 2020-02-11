@@ -4,8 +4,6 @@ import '../App.css'
 import {Modal, Form} from 'react-bootstrap'
 import {connect} from 'react-redux'
 import ip from './ip'
-import ScrollableAnchor from 'react-scrollable-anchor'
-import { goToAnchor } from 'react-scrollable-anchor'
 
 
 
@@ -32,7 +30,7 @@ class Presentation extends React.Component {
       
         sendMessage(){
           this.setState({show:false});
-          fetch(`http://localhost:3000/users/create-message`, {
+          fetch(`${ip}/users/create-message`, {
             method: 'POST',
             headers: {'Content-Type':'application/x-www-form-urlencoded'},
             body: `object=Contactez_moi&content=${this.state.SendMessageContent}&sender_email=${this.state.SendMessageEmail}&sender_name=${this.state.SendMessageName}`
@@ -52,7 +50,6 @@ class Presentation extends React.Component {
 
       
     return(
- <ScrollableAnchor id={'contact'} >
   <div className="row justify-content-center col-11 mx-auto" style={{fontFamily:"Raleway"}}>
     <div>
     <h1 style={{fontSize:"4em", textAlign:"center"}}> Je me présente</h1>
@@ -122,7 +119,6 @@ Alors pour redorer votre blason, faire plaisir à mamie ou tout simplement se fa
       </div>
     </Modal>
   </div>
-</ScrollableAnchor>
 )}
 }
 
