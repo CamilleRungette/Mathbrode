@@ -45,9 +45,9 @@ class Navigbar extends React.Component{
         <DropdownMenu >
           <Link to="/items" style={{fontSize:'1.2em'}}><DropdownItem>Articles</DropdownItem></Link> 
           <Link to="/events" style={{fontSize:'1.2em'}}> <DropdownItem >Événements</DropdownItem></Link>
-          <Link to ="/classes" style={{fontSize:'1.2em'}}><DropdownItem>Ateliers</DropdownItem></Link>
+          <Link to ="/classes" ><DropdownItem style={{fontSize:'1.2em'}}>Ateliers</DropdownItem></Link>
           {this.props.connected ? (
-            <span>
+            <span> 
           <Link to ="/profil" style={{fontSize:'1.2em'}}><DropdownItem>Mon profil</DropdownItem></Link>
           <Link to="/myorders" style={{fontSize:'1.2em'}}><DropdownItem>Mes commandes</DropdownItem></Link>
           <Link to="/basket" style={{fontSize:'1.2em'}}><DropdownItem >Panier</DropdownItem></Link>
