@@ -80,7 +80,7 @@ class Navigbar extends React.Component{
                 </NavItem>
 
                 <NavItem>
-                <a href="/classes"><NavLink>Ateliers</NavLink></a>
+                <Link to ="/classes"><NavLink>Ateliers</NavLink></Link>
                 </NavItem>
 
                  
