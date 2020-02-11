@@ -8,20 +8,20 @@ import ip from './ip'
 
 
 class Login extends React.Component{
-    constructor(){
-super();
-this.handleSubmitSignUp = this.handleSubmitSignUp.bind(this);
-this.handleSubmitSignIn = this.handleSubmitSignIn.bind(this)
-this.state = {
-     newUserFirstName:'',
-     newUserLastName: '',
-     newUserEmail: '',
-     newUserPassword: '',
-      SignInEmail:'',
-      SignInPassword:'',
-      isUserExist: false,
+    constructor(props){
+    super(props);
+    this.handleSubmitSignUp = this.handleSubmitSignUp.bind(this);
+    this.handleSubmitSignIn = this.handleSubmitSignIn.bind(this)
+    this.state = {
+        newUserFirstName:'',
+        newUserLastName: '',
+        newUserEmail: '',
+        newUserPassword: '',
+          SignInEmail:'',
+          SignInPassword:'',
+          isUserExist: false,
+        }
     }
-}
 
   handleSubmitSignUp(){
     let ctx = this
