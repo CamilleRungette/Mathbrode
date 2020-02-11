@@ -20,3 +20,7 @@ Express, MongoDB (Mongoose), React and Boostrap
 ### Team :
 
 From the 5th to the 20th December, I was helped by [Guillaume Lanes](https://github.com/G-Lanes/) for the front-end.
+
+
+### PS:
+The reason why there are so few commits and only one branch is because this is not the original repo. I started a repo but once done, i wasn't able to deploy it online; only the index.html page was read by the browser. I've reconstructeed a React app from scratchs and imported only the code I needed. If you want to see the evolution, you can find the original code in the [mathbrode-faulty-deploy](https://github.com/CamilleRungette/mathbrode-faulty-deploy) repo.
