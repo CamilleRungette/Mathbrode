@@ -49,7 +49,7 @@ class Creations extends React.Component {
  return (
     <div className="row justify-content-center">
         <div className="col-xl-8 col-md-10 ">
-              <div style={{fontFamily:"Raleway"}}>
+              <div style={{fontFamily:"Open Sans"}}>
                 <h1 style={{fontSize:"4em", textAlign:"center"}} class="creations-title"> Mes Créations </h1>
                 <div style={{height:"8em"}}></div>
 
@@ -60,7 +60,7 @@ class Creations extends React.Component {
               </div>
               <div style={{height:"2em"}}></div>
               <div className="row" style={{display:"flex", justifyContent: "center"}}>
-                <Link to="/items"> <Button style={{fontSize:"1.3em", backgroundColor:"#1b263b", fontFamily:"Raleway"}}> En voir plus...</Button> </Link>
+                <Link to="/items"> <Button style={{fontSize:"1.3em", backgroundColor:"#1b263b", fontFamily:"Open Sans"}}> En voir plus...</Button> </Link>
               </div>
         </div>
     </div>

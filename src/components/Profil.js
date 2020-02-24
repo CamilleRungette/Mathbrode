@@ -13,7 +13,7 @@ const titre={
 let modalStyle={
   width:"50em",
   backgroundColor: "white",
-  fontFamily: "Raleway"
+  fontFamily: "Open Sans"
 }
 
 class Profil extends Component{
@@ -78,12 +78,12 @@ class Profil extends Component{
 
     return(
       <div>
-        <div style={{fontFamily:"Raleway"}}>
+        <div style={{fontFamily:"Open Sans"}}>
           <Navbar/>
           <div >
           <div style={{height:"8em"}}></div>
           <Card className="col-xl-5 col-sm-8  col-xs-11 mx-auto"  style={{marginTop:"8em"}}>
-          <h2 style={{textAlign:"center", fontSize:"3em", marginTop:'1em'}}>Ton Profil</h2>
+          <h1 style={{textAlign:"center", fontSize:"3em", marginTop:'1em'}}>Ton Profil</h1>
           <div style={{height:"1em"}}></div>
             <div>
               <div style={{fontSize:'1.8em', textAlign:'center'}} >Salut {this.props.userSigned.first_name} !</div>
@@ -104,7 +104,7 @@ class Profil extends Component{
                      )}
                      <br/>
                      <div style={{textAlign:"center"}}>
-                      <Button style={{backgroundColor:"#1B263B", border:"none"}}  onClick={this.handleShow}>Modifier</Button>
+                      <Button style={{backgroundColor:"#1B263B", border:"none", fontSize:"1.1em"}}  onClick={this.handleShow}>Modifier</Button>
                     </div>
                </div>
                  </div>
@@ -165,7 +165,7 @@ class Profil extends Component{
                     </Row>
                   </Form.Group>
 
-                  <Button style={{backgroundColor:"#1B263B", border:"none"}} onClick={this.handleSubmitUpdate}>
+                  <Button style={{backgroundColor:"#1B263B", border:"none", fontSize:"1.2em"}} onClick={this.handleSubmitUpdate}>
                     Enregistrer
                 </Button>
                 </Form>

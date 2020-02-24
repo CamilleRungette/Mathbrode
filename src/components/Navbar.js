@@ -24,13 +24,13 @@ class Navigbar extends React.Component{
   toggle(){
     this.setState({dropdownOpen: !this.state.dropdownOpen});
   }
-  
+   
   render(){
     return(
       <div className="row topnav" style={{marginLeft:"0px",marginRight:"0px"}}>
 
 
-    <Navbar light expand="md" style={{fontFamily:"Raleway", width: "95%", height:"12*5em" , display:"flex", justifyContent:"space-between", margin:"auto",padding:"0"}}>
+    <Navbar light expand="md" style={{fontFamily:"Roboto", width: "95%", height:"12*5em" , display:"flex", justifyContent:"space-between", margin:"auto",padding:"0"}}>
         <div xs="2" style={{textAlign:"right"}}>
             <NavbarBrand>
               <Link to="/"><img src="/logo bis.png" style={{width:"5.3em"}} /> </Link>
@@ -61,7 +61,7 @@ class Navigbar extends React.Component{
       </div>
     
         <div xs="10" class="menu" >
-            <Nav navbar style={{fontSize:"1.3em", fontWeight:"bold"}}> 
+            <Nav navbar style={{fontSize:"1.4em"}}> 
 
             {this.props.connected ? (
               <div></div>

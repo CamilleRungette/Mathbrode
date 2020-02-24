@@ -42,10 +42,10 @@ class MyOrders extends Component{
       return(
         <div>
           <Navbar />
-          <div style={{fontFamily:"Raleway", height:"75vh"}}>
+          <div style={{fontFamily:"Open Sans", height:"75vh"}}>
           <div style={{height:"10em"}}></div>
             <div style={{textAlign:"center", fontSize:"3.3em"}}>
-              <p>Mes Commandes</p>
+              <h1 className="order-title">Mes Commandes</h1>
             </div>
             <div style={{height:"5em"}}></div>
 
@@ -61,18 +61,18 @@ class MyOrders extends Component{
 
         } else{
       return(
-      <div style={{fontFamily:"Raleway"}}>
+      <div style={{fontFamily:"Open Sans "}}>
         <Navbar/>
         <div style={{height:'10em'}}></div>
         <div style={{textAlign:"center", fontSize:"3.3em"}}>
-              <p>Mes Commandes</p>
+              <h1 className="order-title">Mes Commandes</h1>
             </div>
         <div style={{height:'5em'}}></div>
 
         {this.state.myOrders.map((order, i)=>(
         <Card className="col-8 mx-auto" style={{margin:"5em", minWidth:'30em' }} >
           <Card.Body  >
-            <Card.Title><h1>Commande du {DateFormat(order.date)} </h1></Card.Title>
+            <Card.Title><h2>Commande du {DateFormat(order.date)} </h2></Card.Title>
             <Card.Subtitle className="mb-2 text-muted"># {order._id} </Card.Subtitle>
             <Card.Text>
               <h4>Détails de la commande: </h4>
@@ -100,14 +100,14 @@ class MyOrders extends Component{
         ))}
 
 <div style={{textAlign:"center", fontSize:"3.3em"}}>
-              <p>Mes Commandes personnalisées</p>
+              <h1 className="order-title">Mes Commandes personnalisées</h1>
             </div>
         <div style={{height:'5em'}}></div>
 
         {this.state.myPersoOrders.map((order, i)=>(
         <Card className="col-8 mx-auto" style={{margin:"5em", minWidth:'30em' }} >
           <Card.Body  >
-            <Card.Title><h1>Commande du {DateFormat(order.date)} </h1></Card.Title>
+            <Card.Title><h2>Commande du {DateFormat(order.date)} </h2></Card.Title>
             <Card.Subtitle className="mb-2 text-muted"># {order._id} </Card.Subtitle>
             <Card.Text>
               <h4>Détails de la commande: </h4>
@@ -124,7 +124,7 @@ class MyOrders extends Component{
                         <Card.Text>
                           {order.description} <br/><br/>
                           {order.paid === false?(
-                            <Link to="/checkout"  style={{fontSize:"1.2em"}} onClick={()=> this.props.onOrderClick(order)}>À payer</Link>
+                            <Link to="/checkout"  style={{fontSize:"1.2em", color:"#365182", fontWeight:"bold"}} onClick={()=> this.props.onOrderClick(order)}>À payer</Link>
                             ):(
                               <p>Payée</p>
                               )}

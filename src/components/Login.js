@@ -68,7 +68,7 @@ class Login extends React.Component{
           <div style={{position:"absolute", top: "0px", width:"100%"}}>
           <Navbar/>
 
-            <div class="container" style={{marginTop:'5em', fontFamily:"Raleway"}}>
+            <div class="container" style={{marginTop:'5em', fontFamily:"Open Sans"}}>
               <div style={{height:"10em"}}></div>
             <Row style={{justifyContent:"space-around"}}>
             <Col lg={5} xs={11}>
@@ -86,7 +86,7 @@ class Login extends React.Component{
                     value={this.state.SignInPassword} />
                   </Form.Group>
                 </Form>
-                  <Button style={{backgroundColor:"#1B263B", border:"none"}} variant="secondary" onClick={this.handleSubmitSignIn}>
+                  <Button style={{backgroundColor:"#1B263B", border:"none", fontSize:"1.2em"}} variant="secondary" onClick={this.handleSubmitSignIn}>
                     Se Connecter
                   </Button>
             </Col>
@@ -121,7 +121,7 @@ class Login extends React.Component{
                   value={this.state.newUserPassword} />
                 </Form.Group>
               </Form>
-                <Button style={{backgroundColor:"#1B263B", border:"none"}} variant="secondary" onClick={this.handleSubmitSignUp}>
+                <Button style={{backgroundColor:"#1B263B", border:"none", fontSize:"1.2em"}} variant="secondary" onClick={this.handleSubmitSignUp}>
                   S'inscrire
               </Button>
             </Col>

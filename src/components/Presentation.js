@@ -10,7 +10,7 @@ import ip from './ip'
 let modalStyle={
   width:"50em",
   backgroundColor: "white",
-  fontFamily: "Raleway"
+  fontFamily: "Open Sans"
 }
 
 
@@ -50,7 +50,7 @@ class Presentation extends React.Component {
 
       
     return(
-  <div className="row justify-content-center col-11 mx-auto" style={{fontFamily:"Raleway"}}>
+  <div className="row justify-content-center col-11 mx-auto" style={{fontFamily:"Open Sans"}}>
     <div>
     <h1 style={{fontSize:"4em", textAlign:"center"}}> Je me présente</h1>
     <div style={{height:"8em"}}></div>
@@ -68,7 +68,7 @@ class Presentation extends React.Component {
             Depuis mon canapé parisien, je vous confectionne des petites broderies toutes droit sorties de mon imagination débordante. Je m’appelle Mathilde et depuis plus d’un an j’ai troqué mes papiers et crayons pour une aiguille et du fil. 
 Alors pour redorer votre blason, faire plaisir à mamie ou tout simplement se faire un petit cadeau, n’hésitez pas à vous lancer dans l’aventure brodée !            </p>
             <div style={{ display:"flex", justifyContent:"center", alignItems:"center"}}>
-              <Button onClick={this.handleShow} style={{backgroundColor: "#1B263B" , marginTop:"1.3em", fontSize:"1.2em"}}>Me contacter</Button>
+              <Button onClick={this.handleShow} style={{backgroundColor: "#1B263B" , marginTop:"1.3em", fontSize:"1.3em"}}>Me contacter</Button>
             </div>
           </div>
         </div>

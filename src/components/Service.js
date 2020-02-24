@@ -13,7 +13,7 @@ import ip from './ip'
 let modalStyle={
   width:"50em",
   backgroundColor: "white",
-  fontFamily: "Raleway"
+  fontFamily: "Open Sans"
 }
 
 class Service extends Component{
@@ -85,12 +85,12 @@ onDrop(picture) {
 
 
 
-        <Row className="col-10 mx-auto" style={{ fontFamily:"Raleway", display:"flex", paddingLeft:'5%'}}>
+        <Row className="col-10 mx-auto" style={{ fontFamily:"Open Sans", display:"flex", paddingLeft:'5%'}}>
           <Col style={{display:"flex",marginBottom:"3em"}}>
             <Card style={{cursor:"pointer", backgroundColor:"#EDF3F7", width:"20em", height:"15em", padding:"1em", border:"none"}}>
               <CardBody >
                 <div style={{display:"flex", justifyContent:"space-between", marginBottom:"0.6em"}} >
-                <Link to="/classes" ><CardTitle style={{ fontSize:"1.2em", color:"black"}} ><strong>Atelier d'initiation</strong> </CardTitle></Link>
+                <Link to="/classes" ><CardTitle style={{ fontSize:"1.2em", color:"black", fontFamily:"Roboto"}} ><strong>Atelier d'initiation</strong> </CardTitle></Link>
                 <FontAwesomeIcon icon={faCalendarAlt} className="fa-2x"/>
                 </div>
                   <CardText>Je vous propose de vous initier aux bases de la broderie pendant un cours de 2h. Réservez-votre créneau</CardText>
@@ -102,7 +102,7 @@ onDrop(picture) {
             <Card style={{cursor:"pointer", backgroundColor:"#EDF3F7", width:"20em", height:"15em", padding:"1em", border:"none"}}>
               <CardBody onClick={this.handleShow} >
                 <div style={{display:"flex", justifyContent:"space-between", marginBottom:"0.6em"}} >
-                <CardLink style={{ fontSize:"1.2em"}} ><strong>Projets personnalisés</strong> </CardLink>
+                <CardLink style={{ fontSize:"1.2em", fontFamily:"Roboto"}} ><strong>Projets personnalisés</strong> </CardLink>
                 <FontAwesomeIcon icon={faCut} className={"fa-2x"}/>
                 </div>
                   <CardText>Une idée de modèle ? Vous pouvez me contacter pour des projets personnels. Dessins, prénom, couronnes .. Demandez-moi</CardText>
@@ -114,7 +114,7 @@ onDrop(picture) {
             <Card style={{cursor:"pointer", backgroundColor:"#EDF3F7", width:"20em", height:"15em", padding:"1em", border:"none"}}>
               <CardBody >
                 <div style={{display:"flex", justifyContent:"space-between", marginBottom:"0.6em"}} >
-                <Link to="/events"> <CardTitle style={{ color: "black", fontSize:"1.2em"}} ><strong>Rencontrez-moi</strong> </CardTitle> </Link>
+                <Link to="/events"> <CardTitle style={{ color: "black", fontSize:"1.2em", fontFamily:"Roboto"}} ><strong>Rencontrez-moi</strong> </CardTitle> </Link>
                 <FontAwesomeIcon icon={faHandshake} className={"fa-2x"}/>
                 </div>
                  <CardText>Venez me rencontrer directement sur les marchés auxquels je participe régulièrement.</CardText>

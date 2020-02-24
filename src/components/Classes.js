@@ -10,7 +10,7 @@ import ip from './ip'
 let modalStyle={
   width:"50em",
   backgroundColor: "white",
-  fontFamily: "Raleway",
+  fontFamily: "Open Sans",
 }
 
 
@@ -86,7 +86,7 @@ class Classes extends Component{
 
   render(){
     return(
-    <div style={{fontFamily:"Raleway"}}>
+    <div style={{fontFamily:"Open Sans"}}>
       <Navbar/>
       <div style={{height:"8em"}}></div>
       <Col sm={11} style={{margin:"auto"}}>

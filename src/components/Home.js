@@ -20,13 +20,12 @@ class Home extends React.Component {
 
 
           <div className="row" style={{margin:"auto"}}>
-              <div className="col-lg-12" style={{paddingLeft:0,paddingRight:0}}>            
-                    <img class="back-img" src="./background.jpg" alt="background" ></img>
+              <div className="col-lg-12 home-container" style={{paddingLeft:0,paddingRight:0}}>            
+                  <img class="back-img" src="./background2.jpeg" alt="background" />
       
-                    <div className="text-block">
-                    <p>Broderie <br/> Moderne</p>
-                    </div>
-      
+                  <div className="text-block">
+                    <p>Broderie Moderne</p>
+                  </div>
               </div>
           </div>
           <div style={{marginBottom:"10em"}} ></div>

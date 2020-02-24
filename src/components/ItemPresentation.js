@@ -69,16 +69,16 @@ class ItemPresentation extends React.Component {
    return(
 <div>
   <Navbar/>
-    <div className="row justify-content-center" style={{fontFamily:"Raleway"}}>
+    <div className="row justify-content-center" style={{fontFamily:"Open Sans"}}>
       <div className="col-lg-10" >
       <div style={{height:"10em"}}></div>
         <div>
-          <p style={{textAlign:"center", fontSize:"4em"}}>{this.state.name}</p>
+          <h1 style={{textAlign:"center", fontSize:"4em", marginBottom:"4%"}}>{this.state.name}</h1>
         </div>
 
-        <div className="row col-lx-6 col-lg-9 col-xs-11 border" style={{margin:"auto", fontSize:'1.1em'}} >
+        <div className="row col-lx-6 col-lg-9 col-xs-11 " style={{margin:"auto", fontSize:'1.1em'}} >
         <div class="hover mb-3">
-          <div class="zoom ">
+          <div class="zoom mb-4">
             <img src={this.state.photo} className=" col-lg-8" style={{height:"40em", objectFit:"contain", margin:"auto"}} alt="Alt text" />
           </div>
         </div>
@@ -88,7 +88,7 @@ class ItemPresentation extends React.Component {
                   <p style={{display:"flex", alignItems:"center", fontSize:"1em",marginBottom: "2rem", height:"8em"}}>{this.state.desc}</p>
                 </Col>
                 <Col lg={4} style={{minWidth:'10em', maxWidth:'15em', margin:"auto"}}>
-                  <p style={{ fontSize:"1.2em",marginBottom: "2rem",padding:"0.5rem" ,backgroundColor:"#1b263b",color:"white"}}>Info Pratiques :<br/>
+                  <p style={{ fontSize:"1.2em",marginBottom: "2rem",padding:"0.5rem" ,backgroundColor:"#1b263b",color:"white"}}> <strong>Info Pratiques</strong> <br/>
                   Prix: {this.state.price}€<br/>
                   Exemplaire: {this.state.copy}<br/>
                   Taille: {this.state.size}
@@ -137,7 +137,7 @@ class ItemPresentation extends React.Component {
                 value={this.state.content} />
               </FormGroup>
               <div className="d-flex justify-content-center" >
-                <Link to="/"><Button  style={{backgroundColor:"#1b263b"}} onClick={this.sendMessage}>Envoyer</Button> </Link> 
+                <Link to="/"><Button  style={{backgroundColor:"#1b263b", fontSize:"1.2em"}} onClick={this.sendMessage}>Envoyer</Button> </Link> 
               </div>
             <div style={{height:"5em"}}></div>
             </Form>
