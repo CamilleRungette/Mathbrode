@@ -15,7 +15,7 @@ class Navigbar extends React.Component{
   }
 
     render(){
-      if (this.props.adminConnected === false || this.props.adminConnected === null){
+      if (this.props.adminConnected === false || this.props.adminConnected === undefined){
         return (
           <div>
               <Navbar className="px-5" light style={{fontFamily:"Raleway", width: "100%", height:"12*5em" , display:"flex", justifyContent:"space-between", margin:"auto", backgroundColor:'rgba(255, 255, 255, 0.85)', borderBottom:"1px solid #d3d3d3"}}>
