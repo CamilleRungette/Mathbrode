@@ -53,7 +53,7 @@ class Creations extends React.Component {
                 <h1 style={{fontSize:"4em", textAlign:"center"}} class="creations-title"> Mes Créations </h1>
                 <div style={{height:"8em"}}></div>
 
-              <div className="row" style={{display:"flex", margin:'auto'}}>
+              <div className="row" style={{display:"flex", margin:'auto', textAlign:'center'}}>
                 {itemsList}
               </div>
              

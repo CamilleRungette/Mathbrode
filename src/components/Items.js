@@ -13,7 +13,7 @@ class Items extends Component{
     this.state={
       items: [],
     }
-  }
+  } 
 
   componentDidMount(){
     let ctx=this

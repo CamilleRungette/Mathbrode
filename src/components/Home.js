@@ -8,7 +8,7 @@ import Footer from './Footer'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {connect} from 'react-redux';
 
-
+ 
 class Home extends React.Component {
 
   render(){

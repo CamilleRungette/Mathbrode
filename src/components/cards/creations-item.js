@@ -7,11 +7,11 @@ class CreationItem extends React.Component {
   render() {  
   return (
    
-    <div className="col-xl-4 col-md-6 col-xs-12 my-3">  
+    <div className="creation-item">  
     <Link to={`/item/${this.props.itemName}`}>
       <div className="productTitle mx-auto" style={{ width:"18em", marginBottom:"4em"}}>
         <div className="overlay-image">
-            <img className="image" style={{height:"18em", objectFit:"contain"}} src={this.props.itemPhoto} alt={this.props.itemName} />
+            <img className="image" style={{height: "18em", objectFit:"contain"}} src={this.props.itemPhoto} alt={this.props.itemName} />
             <div className="normal">
               <div className="text"></div>
             </div>

@@ -7,7 +7,7 @@ class ShopItem extends React.Component {
   render() {  
   return (
    
-    <div className=" col-xl-4 col-lg-6 col-md-12 col-xs-12 my-5">  
+    <div className="shop-item">  
     <Link to={`/item/${this.props.itemName}`}>
       <div className="productTitle">
         <div className="overlay-image">
