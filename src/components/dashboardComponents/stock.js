@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import {Card, Button,   Col, Form, Row, Table, Modal } from 'react-bootstrap';
+import React from 'react';
+import {Card, Button, Col, Form, Row } from 'react-bootstrap';
 import NavbarAdmin from './NavbarAdmin';
 import FooterAdmin from './footerAdmin';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -109,7 +109,7 @@ class stock extends React.Component{
 }
 
     render(){
-      if (this.props.adminConnected == false || this.props.adminConnected == null){
+      if (this.props.adminConnected === false || this.props.adminConnected === null){
         return <Redirect to="/loginadmin" />
      }
 
@@ -192,7 +192,7 @@ class stock extends React.Component{
                       <div>
                       <Col lg={4}>
                         <Form.Label style={{fontWeight:"bold"}}>Mise en avant ({this.state.number.length})</Form.Label>
-                        {this.state.checked == false?(
+                        {this.state.checked === false?(
                           <Form.Check style={{marginLeft:'1em'}} type="checkbox" onClick={() => this.setState({checked: !this.state.checked})} />
                         ):(
                           <Form.Check checked style={{marginLeft:'1em'}} type="checkbox" onClick={() => this.setState({checked: !this.state.checked})} />

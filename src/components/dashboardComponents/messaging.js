@@ -52,7 +52,7 @@ class Messages extends React.Component{
   }
 
     render(){
-      if (this.props.adminConnected == false || this.props.adminConnected == null){
+      if (this.props.adminConnected === false || this.props.adminConnected === null){
         return <Redirect to="/loginadmin" />
      }
 

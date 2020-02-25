@@ -114,7 +114,7 @@ class MyOrders extends Component{
               <div>
                 <Card style={{ width:'100%'}}>
                   <div style={{display:"flex"}}>
-                    {order.photo != "" ?(
+                    {order.photo !== "" ?(
                       <Card.Img  variant="top" className="my-auto" style={{width:'12em', maxHeight:'14em', display:'flex',}} src={order.photo} />
                     ):(
                       <div className="col-1"></div>

@@ -80,7 +80,7 @@ class CheckoutForm extends Component {
 
   render() {
     console.log("CONNECTION USER:", this.props.persoOrder)
-    if (this.props.connected == false || this.props.connected == null){
+    if (this.props.connected === false || this.props.connected === null){
       return <Redirect to="/" />
     } else if (this.state.complete){
       this.RedirectMethod()
@@ -112,7 +112,7 @@ class CheckoutForm extends Component {
                      <div>
                      {this.props.item.map((item, i) => (
                         <div className="border" style={{display:"flex", justifyContent:"space-between", alignItems:"center", paddingRight:'1em'}}>
-                        <img src={item.photo} style={{width:"6em"}} />
+                        <img src={item.photo} style={{width:"6em"}} alt="item" />
                           <p> {item.name}</p>
                           <p> {item.price} €</p>
                         </div>
@@ -127,7 +127,7 @@ class CheckoutForm extends Component {
                     <div>
                         <div className="border" style={{display:"flex", justifyContent:"space-between", alignItems:"center", paddingRight:'1em'}}>
                           {this.props.persoOrder.photo?(
-                            <img src={this.props.persoOrder.photo} style={{width:"6em", marginLeft:'2px'}} />
+                            <img src={this.props.persoOrder.photo} alt="item" style={{width:"6em", marginLeft:'2px'}} />
                           ):(
                             <div></div>
                           )}

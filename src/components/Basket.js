@@ -31,9 +31,9 @@ class Basket extends React.Component {
 
   render() {
     console.log(this.props.user)
-      if (this.props.connected == false || this.props.connected == null){
+      if (this.props.connected === false || this.props.connected === null){
         return <Redirect to="/" />
-      }else if (this.props.item.length == 0){
+      }else if (this.props.item.length === 0){
         return(
           <div>
             <Navbar />

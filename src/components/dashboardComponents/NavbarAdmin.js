@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import {  Button,  Navbar,  NavbarBrand,  Nav,  NavItem,  NavLink,} from 'reactstrap';
+import React from 'react';
+import {Button, Navbar, NavbarBrand, Nav, NavItem} from 'reactstrap';
 import {Link} from 'react-router-dom';
 import { connect } from 'react-redux';
-import { Redirect } from 'react-router-dom';
 
 
 class Navigbar extends React.Component{
@@ -16,13 +15,13 @@ class Navigbar extends React.Component{
   }
 
     render(){
-      if (this.props.adminConnected == false || this.props.adminConnected == null){
+      if (this.props.adminConnected === false || this.props.adminConnected === null){
         return (
           <div>
               <Navbar className="px-5" light style={{fontFamily:"Raleway", width: "100%", height:"12*5em" , display:"flex", justifyContent:"space-between", margin:"auto", backgroundColor:'rgba(255, 255, 255, 0.85)', borderBottom:"1px solid #d3d3d3"}}>
                   <div style={{textAlign:"right"}}>
                       <NavbarBrand>
-                      <Link to="/" ><img src="/logo bis.png" style={{width:"5.3em"}} /> </Link>
+                      <Link to="/" ><img src="/logo bis.png" alt="logo" style={{width:"5.3em"}} /> </Link>
                       </NavbarBrand>
                   </div>
 
@@ -43,7 +42,7 @@ class Navigbar extends React.Component{
     <Navbar  light expand="md" className="px-5" style={{fontFamily:"Raleway", backgroundColor:'rgba(255, 255, 255, 0.85)', width: "100%", height:"12*5em" , display:"flex", justifyContent:"space-between", margin:"auto",  borderBottom:"1px solid #d3d3d3"}}s>
         <div style={{textAlign:"right"}}>
             <NavbarBrand>
-            <Link to="/" ><img src="/logo bis.png" style={{width:"5.3em"}} /> </Link>
+            <Link to="/" ><img src="/logo bis.png" alt="logo" style={{width:"5.3em"}} /> </Link>
             </NavbarBrand>
         </div>
 

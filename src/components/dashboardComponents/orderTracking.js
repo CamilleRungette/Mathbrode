@@ -208,7 +208,7 @@ class tracking extends React.Component{
 
     render(){
       console.log("=======================================>",this.state.orders)
-      if (this.props.adminConnected == false || this.props.adminConnected == null){
+      if (this.props.adminConnected === false || this.props.adminConnected === null){
         return <Redirect to="/loginadmin" />
      }
 
@@ -277,7 +277,7 @@ class tracking extends React.Component{
                 {this.state.loading ? (
                   <h6> Chargement ...</h6>
                 ) : (
-                 <img src={this.state.SendMessagePhoto} alt="item chosen photo" style={{width:"10em", marginLeft:'8em'}} />
+                 <img src={this.state.SendMessagePhoto} alt="item chosen" style={{width:"10em", marginLeft:'8em'}} />
                 )}
             </Form.Group>
           </Form>
@@ -311,19 +311,19 @@ class tracking extends React.Component{
                   {this.state.orders.map((order,i) =>(               
                   <tr>                                  
                     <td>{DateFormat(order.date)}</td>
-                    {order.sent == false ?(
+                    {order.sent === false ?(
                       <td> En préparation</td>
                     ):(
                     <td>Envoyée</td>
                     )}
                     <td>{order.total}€</td>
                     <td>{DateFormat(order.shipping_date)}</td>
-                    {order.in_person == true?(
+                    {order.in_person === true?(
                       <td>Main propre</td>
                     ):(
                       <td>Livraison</td>
                     )}
-                    {order.sent == true ?
+                    {order.sent === true ?
                     (
                       <td><FontAwesomeIcon icon={faCheck} style={{color:"green"}} /> </td>
                       ):(
@@ -416,7 +416,7 @@ class tracking extends React.Component{
                   {this.state.persoOrders.map((order,i) =>(               
                   <tr>                                  
                     <td>{DateFormat(order.date)}</td>
-                    {order.sent == false ?(
+                    {order.sent === false ?(
                       <td> En préparation</td>
                     ):(
                     <td>Envoyée</td>
@@ -427,12 +427,12 @@ class tracking extends React.Component{
                     ):(
                       <td>A payer</td>
                     )}
-                    {order.in_person == true?(
+                    {order.in_person === true?(
                       <td>Main propre</td>
                     ):(
                       <td>Livraison</td>
                     )}
-                    {order.sent == true ?
+                    {order.sent === true ?
                     (
                       <td><FontAwesomeIcon icon={faCheck} style={{color:"green"}} /> </td>
                       ):(
@@ -482,12 +482,12 @@ class tracking extends React.Component{
                                  </ListGroupItem>
                               </Card.Text>
                               
-                              {this.state.order.photo != "" ? (
+                              {this.state.order.photo !== "" ? (
                                 <div>
                               <Card.Title> <strong>Photo: </strong></Card.Title>
                                 <Card.Text>
                                   <ListGroupItem>
-                                 <img src={this.state.order.photo} style={{width:"10em"}} />
+                                 <img src={this.state.order.photo} alt="item" style={{width:"10em"}} />
                                  </ListGroupItem>
                                 </Card.Text>
                                 </div>

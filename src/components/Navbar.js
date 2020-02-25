@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import { Button,  Navbar, NavbarBrand,  Nav,  NavItem,  NavLink, DropdownMenu, DropdownItem, DropdownToggle, Dropdown } from 'reactstrap';
-import {Link, Redirect} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import '../App.css'
@@ -33,7 +33,7 @@ class Navigbar extends React.Component{
     <Navbar light expand="md" style={{fontFamily:"Roboto", width: "95%", height:"12*5em" , display:"flex", justifyContent:"space-between", margin:"auto",padding:"0"}}>
         <div xs="2" style={{textAlign:"right"}}>
             <NavbarBrand>
-              <Link to="/"><img src="/logo bis.png" style={{width:"5.3em"}} /> </Link>
+              <Link to="/"><img src="/logo bis.png" alt="logo" style={{width:"5.3em"}} /> </Link>
             </NavbarBrand>
         </div>
 
@@ -54,7 +54,7 @@ class Navigbar extends React.Component{
           <Button color="secondary" style={{marginLeft:'1em', fontSize:"1.2em"}} id="dropHover" onClick={this.LogOut}>Se Déconnecter</Button>
           </span>
           ):(
-            <Button color="secondary "style={{marginLeft:'1em', fontSize:"1.1em"}} href="/login"> Se Connecter</Button>
+            <Button color="secondary "style={{marginLeft:'1em', fontSize:"1.1em"}}> <Link to="/login" className="login-button"> Se Connecter </Link></Button>
           )}
         </DropdownMenu>
       </Dropdown>

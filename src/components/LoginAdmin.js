@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import {Card, Button,   Col, Row, Table, Form} from 'react-bootstrap';
+import React from 'react';
+import {Button,   Col, Row, Form} from 'react-bootstrap';
 import '../App.css';
 import Navbar from './dashboardComponents/NavbarAdmin';
-import {Link, Redirect } from 'react-router-dom';
+import {Redirect } from 'react-router-dom';
 import {connect} from 'react-redux';
 import ip from './ip'
 
@@ -38,7 +38,7 @@ this.state = {
   }
 
       render(){
-        if (this.state.isAdminExist === true || this.props.adminConnected == true){
+        if (this.state.isAdminExist === true || this.props.adminConnected === true){
           console.log("CONDITION:", this.state.isAdminExist)
           return < Redirect to="/dashboard" />
         }

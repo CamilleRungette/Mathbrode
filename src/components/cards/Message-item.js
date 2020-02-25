@@ -4,8 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck, faTrashAlt, faReply, faTimes } from '@fortawesome/free-solid-svg-icons'
 import DateFormat from '../function'
 import ip from '../ip'
-import Mailto from 'react-protected-mailto'
-
 
 const readMessage ={
   backgroundColor:"#ededed",

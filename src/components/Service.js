@@ -174,7 +174,7 @@ onDrop(picture) {
                 {this.state.loading ? (
                   <h6> Chargement ...</h6>
                 ) : (
-                 <img src={this.state.SendMessagePhoto} alt="item chosen photo" style={{width:"10em", marginLeft:'8em'}} />
+                 <img src={this.state.SendMessagePhoto} alt="item chosen" style={{width:"10em", marginLeft:'8em'}} />
                 )}
             </Form.Group>
 
