@@ -14,12 +14,12 @@ class Home extends React.Component {
   render(){
 
     return (
-      <div className="col-12 col-lg-12" style={{paddingLeft:"0px", paddingRight:"0px"}}>
-        <Navigbar/>
+      <div className="col-lg-12 principal-body" style={{paddingLeft:"0px", paddingRight:"0px"}}>
 
 
 
           <div className="row" style={{margin:"auto"}}>
+        <Navigbar/>
               <div className="col-lg-12 home-container" style={{paddingLeft:0,paddingRight:0}}>            
                   <img class="back-img" src="./background2.jpeg" alt="background" />
       

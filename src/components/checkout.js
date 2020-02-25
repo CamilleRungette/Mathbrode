@@ -17,7 +17,7 @@ let stripeStyle={
 class CheckoutForm extends Component {
   constructor(props) {
     super(props);
-    this.state = {complete: false, redirect: false};
+    this.state = {complete: false, redirect: false, shipping_fee: 0};
     this.orderSubmit = this.orderSubmit.bind(this);
     this.persoOrderSubmit = this.persoOrderSubmit.bind(this);
     this.RedirectMethod = this.RedirectMethod.bind(this)
@@ -78,8 +78,16 @@ class CheckoutForm extends Component {
     clearTimeout(this.id)
   }
 
+  componentDidMount(){
+    let total = 0;
+    for (let i=0; i< this.props.item.length; i++){
+      total = total + this.props.item[i].shipping_fee
+      console.log(this.props.item[i].shipping_fee);
+    }
+    this.setState({shipping_fee: total})
+  }
+
   render() {
-    console.log("CONNECTION USER:", this.props.persoOrder)
     if (this.props.connected === false || this.props.connected === null){
       return <Redirect to="/" />
     } else if (this.state.complete){
@@ -94,18 +102,18 @@ class CheckoutForm extends Component {
           </div>
           <Footer/>
       </div>
-      )
-      }
+      )}
 
     return (
       <div style={{fontFamily:'Raleway'}}>
         <Navbar/>
-          <div style={{height:"85vh"}}>
+          <div style={{minHeight:"85vh"}}>
             <div style={{height:'10em'}}></div>
             <h1 style={{textAlign:'center', fontSize:'3.5em'}}>Paiement</h1>
             <div style={{height:'8em'}}></div>
               <div className="border col-xl-6 col-lg-8 col-sm-10 col-xs-11" style={{margin:'auto', padding:'2em', fontSize:'1.2em', display:'flex', flexDirection:"column"}}>
-                <h3 style={{textAlign:"center"}}>Montant de la commande:  {this.props.total.total? (this.props.total.total):(this.props.persoOrder.total) } €</h3> <br/>
+                <h3 style={{textAlign:"center"}}>Montant de la commande:  {this.props.total.total? (this.props.total.total):(this.props.persoOrder.total) } €</h3>
+                <h5 style={{textAlign:"center"}}>(Frais de port: {this.state.shipping_fee} € )</h5> <br/>
                 <div style={{width:"80%", margin:"auto"}}>
                   <h5 style={{marginBottom:"0.4em"}}>Récapitulatif:</h5>
                   {this.props.persoOrder === undefined?(

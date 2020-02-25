@@ -23,15 +23,21 @@ class Basket extends React.Component {
   
   componentDidMount(){
     this.setState({items: this.props.item})
+    let total = 0;
+    let shipping_fee = 0;
     for (let i=0; i<this.props.item.length; i++){
-      this.state.total = this.state.total + this.props.item[i].price
-      this.state.shipping_fee = this.state.shipping_fee + this.props.item[i].shipping_fee
+     total = total + this.props.item[i].price
+      shipping_fee = shipping_fee + this.props.item[i].shipping_fee
     } 
+    this.setState({
+      total: total,
+      shipping_fee: shipping_fee,
+    })
   }  
 
   render() {
     console.log(this.props.user)
-      if (this.props.connected === false || this.props.connected === null){
+      if (this.props.connected === false || this.props.connected === undefined){
         return <Redirect to="/" />
       }else if (this.props.item.length === 0){
         return(
@@ -141,7 +147,7 @@ function mapDispatchToProps(dispatch){
       dispatch({type: 'delete', position: position})
     },
     onOrderClick: function(total, in_person){
-      console.log("HELLO")
+      console.log("HELLO", total)
       dispatch({type: 'payOrder', total: total, in_person: in_person})
     }
   }
