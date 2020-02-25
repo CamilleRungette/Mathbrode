@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEdit, faTrashAlt, faWindowClose } from '@fortawesome/free-solid-svg-icons';
 import '../../App.css'
 import { Redirect } from 'react-router-dom';
+import ip from '../ip'
 
 
 class ClassesEvents extends Component{
