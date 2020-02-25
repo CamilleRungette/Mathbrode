@@ -83,7 +83,7 @@ class MessageItem extends Component{
           <p>{this.props.messageContent}  </p>
           {this.props.messagePhoto != null ?(
             <div>
-            <img style={{width:"10em", marginLeft:'10%'}} alt=" " src={this.props.messagePhoto} />
+            <img style={{width:"10em", marginLeft:'10%'}} alt="item" src={this.props.messagePhoto} />
             </div>
           ):(
             <div></div>

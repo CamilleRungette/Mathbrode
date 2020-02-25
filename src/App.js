@@ -22,6 +22,7 @@ import item from './components/Reducer/cart.reducer'
 import admin from './components/Reducer/admin.reducer'
 import total from './components/Reducer/order.reducer'
 import CheckoutForm from './components/StripeCheckout';
+import ClassesEvents from './components/dashboardComponents/ClassesEvents'
 
 import {Provider} from 'react-redux';
 import {createStore, combineReducers}  from 'redux';
@@ -39,6 +40,7 @@ class App extends Component{
         <div>
         <Switch>
           <Route path="/" exact component={Home} />
+          <Route path="/services" component={ClassesEvents} />
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/stock" component={Stock} />
           <Route path="/orderTracking" component={Tracking} />

@@ -325,6 +325,10 @@ html {
   font-family: 'Open Sans', sans-serif;
 }
 
+.dashboard-container{
+  min-height: 85vh;
+}
+
 .mainBack{
   background-image: url('/dashboard.jpeg');
   background-size: cover;
@@ -340,6 +344,28 @@ html {
   .menu{
     display: none;
   }
+}
+
+.event-card{
+  display: flex;
+  justify-content: space-between;
+  font-size: 130%;
+  align-items: center;
+  border: 1px solid #D7D7D7;
+  padding: 2%;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 3%;
+}
+
+.class-para{
+ max-height: 5em;
+ overflow: auto;
+ font-size: 90%;
+}
+
+.class-title{
+  font-weight: bold;
 }
 
 #dropHover:hover{

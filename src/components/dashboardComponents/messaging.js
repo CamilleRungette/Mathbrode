@@ -19,7 +19,7 @@ const noGivenSize={
 class Messages extends React.Component{
 
   constructor(){
-    super()
+    super();
     this.handleClick = this.handleClick.bind(this);
     this.state= {
       messages: [],
@@ -37,7 +37,7 @@ class Messages extends React.Component{
       ctx.setState({messages: data.allMessages})
      console.log("THE STATE FROM HANDLE CLICK ===========>", ctx.state.messages)
     })
-  }
+  } 
 
   componentDidMount(){
     let ctx = this;
@@ -70,7 +70,7 @@ class Messages extends React.Component{
 
       let size;
       if (messageList.length <= 1) {
-        size = givenSize
+        size = givenSize 
       } else{
         size= noGivenSize
       }

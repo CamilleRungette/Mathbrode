@@ -49,16 +49,19 @@ class Navigbar extends React.Component{
         <div xs="10">
             <Nav navbar style={{fontSize:"1.2em"}}>
                 <NavItem>
-                <Link to="/dashboard" class="navigbar nav-link">Accueil</Link>
+                  <Link to="/dashboard" class="navigbar nav-link">Accueil</Link>
                 </NavItem>
                 <NavItem>
-                <Link to="/orderTracking" class="navigbar nav-link">Commandes et suivi</Link>
+                  <Link to="/orderTracking" class="navigbar nav-link">Commandes et suivi</Link>
                 </NavItem>
                 <NavItem>
-                <Link to="/messaging" class="navigbar nav-link">Messagerie</Link>
+                  <Link to="/messaging" class="navigbar nav-link">Messagerie</Link>
                 </NavItem>
                 <NavItem>
-                <Link to="/stock" class="navigbar nav-link">Liste du stock</Link>
+                  <Link to="/stock" class="navigbar nav-link">Liste du stock</Link>
+                </NavItem>
+                <NavItem>
+                  <Link to="/services" class="navigbar nav-link">Ateliers & Évenements</Link>
                 </NavItem>
                 <Link to="/loginadmin"><Button color="secondary" style={{fontSize:'1em'}} onClick={this.LogOut}>Se déconnecter</Button> </Link>
             </Nav>
