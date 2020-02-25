@@ -111,6 +111,10 @@ img {
   margin-bottom: 10%;
 }
 
+.checkout-title{
+  font-family: 'Open Sans' !important;
+  font-size: 300%;
+}
 
 @media screen and (max-width: 1500px){
   .creation-item{
