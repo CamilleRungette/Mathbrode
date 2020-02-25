@@ -86,7 +86,7 @@ class CheckoutForm extends Component {
     }
     this.setState({shipping_fee: total})
   }
-
+ 
   render() {
     if (this.props.connected === false || this.props.connected === null){
       return <Redirect to="/" />

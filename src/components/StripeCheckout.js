@@ -8,13 +8,13 @@ export default class StripeCheckout extends Component {
 
   render () {
     return(
-    <StripeProvider apiKey="pk_test_XzsmxxXobCTTVQyEjOjzFz3600AqJATxPX">
+    <StripeProvider apiKey="pk_live_lq7UdBLmoWlXbVmaKRxsj8OS00MT91bvfx">
         <div className="example">
           <Elements>
             <Purchase />
           </Elements>
         </div>
-      </StripeProvider>
+      </StripeProvider> 
     );
   }
 }
