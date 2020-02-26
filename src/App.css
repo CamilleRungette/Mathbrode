@@ -357,7 +357,6 @@ html {
   display: flex;
   justify-content: space-between;
   font-size: 130%;
-  align-items: center;
   border: 1px solid #D7D7D7;
   padding: 2%;
   width: 80%;
@@ -366,7 +365,7 @@ html {
 }
 
 .class-para{
- max-height: 5em;
+ max-height: 8em;
  overflow: auto;
  font-size: 90%;
 }

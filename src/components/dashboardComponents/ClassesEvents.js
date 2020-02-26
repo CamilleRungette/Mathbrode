@@ -27,6 +27,7 @@ class ClassesEvents extends Component{
     this.updateEvent = this.updateEvent.bind(this)
     this.onDeleteEventClick = this.onDeleteEventClick.bind(this)
     this.onDeleteClassClick = this.onDeleteClassClick.bind(this)
+    this.updateWorkshop = this.updateWorkshop.bind(this)
     this.state={
       eventsList: [], classesList: [],
       show: false,
@@ -56,7 +57,25 @@ class ClassesEvents extends Component{
     .then(function(data){
       console.log("DATAT", data);
       ctx.setState({eventsList: data.allEvents, thisEvent: "", upEvAddress: "", upEvDate: "", upEvEnd: "", upEvStart: "", upEvLink: "", upEvName: ""})
+    }) 
+  }
+
+  updateWorkshop(id){
+    this.setState({show: false})
+    console.log(this.state.upClDesc);
+    let ctx = this;
+    fetch(`${ip}/admins/update-workshop`,{
+      method: "POST",
+      headers: {'Content-Type':'application/x-www-form-urlencoded'},
+      body: `id=${id}&desc=${this.state.upClDesc}&duration=${this.state.upClDur}&price=${this.state.upClPrice}&title=${this.state.upClTitle}`
     })
+    .then(function(response){
+      return response.json();
+    })
+    .then(function(data){
+      ctx.setState({classesList: data.allWorkshops, thisClass: "", upClDesc: "", upClDur: "", upClPrice: "", upClTitle: ""})
+      console.log("DATAT", data);
+    }) 
     
   }
 
@@ -72,7 +91,7 @@ class ClassesEvents extends Component{
         ctx.setState({thisEvent: data.thisEvent, thisClass: "", upEvAddress: data.thisEvent.address, upEvDate: data.thisEvent.date, upEvEnd: data.thisEvent.ending_time, upEvLink:data.thisEvent.link, upEvName: data.thisEvent.name, upEvStart: data.thisEvent.starting_time })
         console.log(ctx.state);
       } else if (data.thisClass){
-        ctx.setState({thisClass: data.thisClass, thisEvent: ""})
+        ctx.setState({thisClass: data.thisClass, thisEvent: "", upClDesc: data.thisClass.desc, upClDur: data.thisClass.duration, upClPrice: data.thisClass.price, upClTitle: data.thisClass.title})
         console.log(ctx.state);
       }
     })
@@ -135,7 +154,7 @@ class ClassesEvents extends Component{
       <div style={{fontFamily:"Raleway"}} className="mainBack">
       <NavbarAdmin/>
         <div class="dashboard-container">
-        <Card className="col-8 mx-auto" style={{maxHeight:"60vh", overflow:"auto", marginTop:"10%"}} >
+        <Card className="col-8 mx-auto" style={{maxHeight:"80vh", overflow:"auto", marginTop:"10%"}} >
           <h2 style={{textAlign:"center", fontSize:"3em", marginTop:'1em'}}>Événements</h2>
           <div style={{height:"1em"}}></div>
           {this.state.eventsList.length === 0?(
@@ -168,7 +187,7 @@ class ClassesEvents extends Component{
             </Card>
 
 
-          <Card className="col-8 mx-auto" style={{maxHeight:"60vh", overflow:"auto", marginTop:"10%", marginBottom:"10%"}} >
+          <Card className="col-8 mx-auto" style={{maxHeight:"80vh", overflow:"auto", marginTop:"10%", marginBottom:"10%"}} >
           <h2 style={{textAlign:"center", fontSize:"3em", marginTop:'1em', marginBottom: "2%"}}>Ateliers</h2>
           <div style={{height:"1em"}}></div>
           {this.state.classesList.length === 0?(
@@ -188,7 +207,7 @@ class ClassesEvents extends Component{
                     <p className="class-title">{classe.title}</p>
                     <p className="class-para">{classe.desc}</p>
                   </div>
-                  <img src={classe.photo} alt={classe.title} style={{width:"25%"}} />
+                  <img src={classe.photo} alt={classe.title} style={{width:"25%", height:"25%"}} />
                   <div style={{width:"7%"}}>
                     <FontAwesomeIcon className={"fa-2x"} style={{marginBottom:"50%", cursor:"pointer"}} icon={faEdit} onClick={() => this.handleShow("", classe._id)} /> <br/>
                     <FontAwesomeIcon className={"fa-2x"} style={{cursor:"pointer"}} icon={faTrashAlt} onClick={() => this.onDeleteClassClick(classe._id)} />
@@ -256,16 +275,40 @@ class ClassesEvents extends Component{
               <Modal.Header closeButton>
                 <Modal.Title>Modifier un atelier</Modal.Title>
               </Modal.Header>
-              <Form.Group as={Row} style={{margin:"auto"}}>
-                  <Col xs={12}>
-                    <Form.Label>Date</Form.Label>
-                    <Form.Control as="textarea" placeholder="Description " onChange={(e)=> this.setState({CreateItemDesc: e.target.value})}
-                        value={this.state.CreateItemDesc} />
-                  </Col>
-                  </Form.Group>
-            <Button style={{backgroundColor:"#1B263B", border:"none"}} variant="secondary" onClick={this.updateService}>
-            Envoyer
-          </Button>
+              <Modal.Body>
+                <Form.Group as={Row} style={{margin:"auto"}}>
+                    <Col xs={12}>
+                      <Form.Label>Titre</Form.Label>
+                      <Form.Control type="text" onChange={(e)=> this.setState({upClTitle: e.target.value})}
+                          value={this.state.upClTitle} />
+                    </Col>
+                </Form.Group>
+
+                <Form.Group as={Row} style={{margin:"auto"}}>
+                    <Col xs={12}>
+                      <Form.Label>Description</Form.Label>
+                      <Form.Control as="textarea" onChange={(e)=> this.setState({upClDesc: e.target.value})}
+                          value={this.state.upClDesc} />
+                    </Col>
+                </Form.Group>
+
+                <Form.Group as={Row} style={{margin:"auto"}}>
+                    <Col xs={6}>
+                      <Form.Label>Durée</Form.Label>
+                      <Form.Control type="text" onChange={(e)=> this.setState({upClDur: e.target.value})}
+                          value={this.state.upClDur} />
+                    </Col>
+                    <Col xs={6}>
+                      <Form.Label>Prix</Form.Label>
+                      <Form.Control type="text" onChange={(e)=> this.setState({upClPrice: e.target.value})}
+                          value={this.state.upClPrice} />
+                    </Col>
+                </Form.Group>
+
+                <Button style={{backgroundColor:"#1B263B", border:"none", marginLeft:"45%", marginTop:"3%"}} variant="secondary" onClick={() => this.updateWorkshop(this.state.thisClass._id)}>
+                  Envoyer
+                </Button>
+              </Modal.Body>
           </div>
 )}
            
