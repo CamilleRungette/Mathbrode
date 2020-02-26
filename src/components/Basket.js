@@ -2,7 +2,7 @@ import React from 'react';
 import {Button} from 'reactstrap';
 import '../App.css'
 import {Link, Redirect} from 'react-router-dom';
-import Navbar from './Navbar'
+import Navbar from './Navbar2'
 import Footer from './Footer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashAlt, faEdit } from '@fortawesome/free-solid-svg-icons'

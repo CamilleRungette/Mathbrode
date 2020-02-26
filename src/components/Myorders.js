@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import Navbar from '../components/Navbar'
+import Navbar from '../components/Navbar2'
 import Footer from '../components/Footer'
 import DateFormat from '../components/function'
 import {Card, Button} from 'react-bootstrap'

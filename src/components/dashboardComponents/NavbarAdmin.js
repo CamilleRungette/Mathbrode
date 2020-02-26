@@ -18,7 +18,7 @@ class Navigbar extends React.Component{
       if (this.props.adminConnected === false || this.props.adminConnected === undefined){
         return (
           <div>
-              <Navbar className="px-5" light style={{fontFamily:"Raleway", width: "100%", height:"12*5em" , display:"flex", justifyContent:"space-between", margin:"auto", backgroundColor:'rgba(255, 255, 255, 0.85)', borderBottom:"1px solid #d3d3d3"}}>
+              <Navbar className="px-5" light style={{fontFamily:"Raleway", width: "100%", height:"12*5em" , display:"flex", justifyContent:"space-between", margin:"auto", backgroundColor:'rgba(255, 255, 255, 0)', borderBottom:"1px solid #d3d3d3"}}>
                   <div style={{textAlign:"right"}}>
                       <NavbarBrand>
                       <Link to="/" ><img src="/logo bis.png" alt="logo" style={{width:"5.3em"}} /> </Link>
@@ -39,7 +39,7 @@ class Navigbar extends React.Component{
 
 <div style={{marginLeft:"0px",marginRight:"0px"}}>
 
-    <Navbar  light expand="md" className="px-5" style={{fontFamily:"Raleway", backgroundColor:'rgba(255, 255, 255, 0.85)', width: "100%", height:"12*5em" , display:"flex", justifyContent:"space-between", margin:"auto",  borderBottom:"1px solid #d3d3d3"}}s>
+    <Navbar  expand="md" className="px-5 navb-link" style={{fontFamily:"Raleway", backgroundColor:'rgba(255, 255, 255, 0)', width: "100%", height:"12*5em" , display:"flex", justifyContent:"space-between", margin:"auto"}}s>
         <div style={{textAlign:"right"}}>
             <NavbarBrand>
             <Link to="/" ><img src="/logo bis.png" alt="logo" style={{width:"5.3em"}} /> </Link>
@@ -47,7 +47,7 @@ class Navigbar extends React.Component{
         </div>
 
         <div xs="10">
-            <Nav navbar style={{fontSize:"1.2em"}}>
+            <Nav navbar style={{fontSize:"1.3em"}}>
                 <NavItem>
                   <Link to="/dashboard" class="navigbar nav-link">Accueil</Link>
                 </NavItem>

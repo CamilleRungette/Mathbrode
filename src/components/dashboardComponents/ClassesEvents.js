@@ -71,9 +71,9 @@ class ClassesEvents extends Component{
     render(){
       console.log(this.props.adminConnected);
       
-      if (this.props.adminConnected === false || this.props.adminConnected === undefined){
-        return <Redirect to="/loginadmin" />
-     }
+    //   if (this.props.adminConnected === false || this.props.adminConnected === undefined){
+    //     return <Redirect to="/loginadmin" />
+    //  }
 
 
     return(

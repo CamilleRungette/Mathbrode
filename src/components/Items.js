@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import ShopItem from './cards/Shop-item'
 import Footer from './Footer'
-import Navigbar from './Navbar'
+import Navigbar from './Navbar2'
 import {Col} from 'reactstrap'
 import ip from './ip'
 

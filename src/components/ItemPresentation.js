@@ -3,7 +3,7 @@ import {  Button} from 'reactstrap';
 import '../App.css'
 import { Col, Row, Form, FormGroup, Input } from 'reactstrap';
 import {Link} from 'react-router-dom';
-import Navbar from './Navbar';
+import Navbar from './Navbar2';
 import Footer from './Footer'
 import {connect} from 'react-redux'
 import ip from './ip'

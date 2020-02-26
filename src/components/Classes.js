@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Footer from './Footer'
-import Navbar from './Navbar'
+import Navbar from './Navbar2'
 import {Button, Input, Card, CardImg, CardText, CardBody, CardTitle, ListGroup, ListGroupItem, Col, Row } from 'reactstrap';
 import {Modal, Form} from 'react-bootstrap'
 import {connect} from 'react-redux'

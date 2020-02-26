@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {CardElement} from 'react-stripe-elements';
-import Navbar from './Navbar'
+import Navbar from './Navbar2'
 import Footer from './Footer'
 import {Button} from 'reactstrap'
 import {Redirect} from 'react-router-dom';

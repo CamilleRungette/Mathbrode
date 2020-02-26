@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux';
 import {Redirect} from 'react-router-dom'
-import Navbar from './Navbar'
+import Navbar from './Navbar2'
 import Footer from './Footer'
 import {Card, Form, Row, Col, Button, Modal} from 'react-bootstrap'
 import ip from './ip'

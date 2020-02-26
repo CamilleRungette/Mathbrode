@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import '../App.css'
 
-class Navigbar extends React.Component{
+class Navigbar2 extends React.Component{
   constructor(props){
     super(props);
     this.LogOut = this.LogOut.bind(this) 
@@ -30,7 +30,7 @@ class Navigbar extends React.Component{
       <div className="row topnav" style={{marginLeft:"0px",marginRight:"0px"}}>
 
 
-    <Navbar expand="md" style={{fontFamily:"Roboto", width: "95%", height:"12*5em" , display:"flex", justifyContent:"space-between", margin:"auto",padding:"0"}}>
+    <Navbar expand="md" light style={{fontFamily:"Roboto", width: "95%", height:"12*5em" , display:"flex", justifyContent:"space-between", margin:"auto",padding:"0"}}>
         <div xs="2" style={{textAlign:"right"}}>
             <NavbarBrand>
               <Link to="/"><img src="/logo bis.png" alt="logo" style={{width:"5.3em"}} /> </Link>
@@ -149,4 +149,4 @@ function mapStatetoProps(state){
 export default connect(
   mapStatetoProps,
   mapDispacthToProps
-)(Navigbar);
+)(Navigbar2);

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button,   Col, Row, Form} from 'react-bootstrap';
 import '../App.css';
-import Navbar from './Navbar';
+import Navbar from './Navbar2';
 import {Redirect } from 'react-router-dom';
 import {connect} from 'react-redux';
 import ip from './ip'

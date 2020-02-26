@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Footer from './Footer'
-import Navigbar from './Navbar'
+import Navigbar from './Navbar2'
 import Event from './cards/Event-item'
 import ip from './ip'
 
