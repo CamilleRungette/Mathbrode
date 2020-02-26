@@ -28,7 +28,7 @@ class Navigbar extends React.Component{
   render(){
     return(
       <div className="row topnav" style={{marginLeft:"0px",marginRight:"0px"}}>
-
+ 
 
     <Navbar expand="md" style={{fontFamily:"Roboto", width: "95%", height:"12*5em" , display:"flex", justifyContent:"space-between", margin:"auto",padding:"0"}}>
         <div xs="2" style={{textAlign:"right"}}>

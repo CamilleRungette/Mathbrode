@@ -1,7 +1,7 @@
 import React from 'react';
 import '../App.css'
 import Creations from './Creations'
-import Navigbar from './Navbar2'
+import Navigbar from './Navbar'
 import Presentation from './Presentation'
 import Service from './Service'
 import Footer from './Footer'
