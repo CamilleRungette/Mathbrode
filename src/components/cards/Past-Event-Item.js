@@ -17,7 +17,8 @@ class PastEvent extends React.Component{
         <CardBody>
           <CardTitle> <strong> {this.props.eventName} </strong></CardTitle>
           <CardText>
-            {this.props.eventAddress}
+            {this.props.eventAddress} <br/>
+            {this.props.eventZipCode} - {this.props.eventCity}
           </CardText>
         </CardBody>
         <CardBody className="list-group-flush">

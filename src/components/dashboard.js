@@ -34,6 +34,8 @@ class Dashboard extends Component {
           CreateEventStart: '',
           CreateEventEnd: '',
           CreateEventLink:'',
+          CreateEventZipCode: '',
+          CreateEventCity: '',
           loading: '',
           CreateWorkshopTitle: '',
           CreateWorkshopDesc: '',
@@ -80,7 +82,7 @@ class Dashboard extends Component {
     fetch(`${ip}/admins/create-event`, {
       method: 'POST',
       headers: {'Content-Type':'application/x-www-form-urlencoded'},
-      body: `name=${this.state.CreateEventName}&address=${this.state.CreateEventAddress}&date=${this.state.CreateEventDate}&starting_time=${this.state.CreateEventStart}&ending_time=${this.state.CreateEventEnd}&photo=${this.state.CreateEventPhoto}&link=${this.state.CreateEventLink}`
+      body: `name=${this.state.CreateEventName}&address=${this.state.CreateEventAddress}&date=${this.state.CreateEventDate}&starting_time=${this.state.CreateEventStart}&ending_time=${this.state.CreateEventEnd}&photo=${this.state.CreateEventPhoto}&link=${this.state.CreateEventLink}&zip_code=${this.state.CreateEventZipCode}&city=${this.state.CreateEventCity}`
     })
     .then(function(response) {
       return response.json();
@@ -94,6 +96,8 @@ class Dashboard extends Component {
         CreateEventStart: '',
         CreateEventEnd: '',
         CreateEventLink: '',
+        CreateEventCity: '',
+        CreateEventZipCode: ''
       })
     })
   }
@@ -172,9 +176,9 @@ class Dashboard extends Component {
 
   
     render(){
-      if (this.props.adminConnected === false || this.props.adminConnected == null){
-         return <Redirect to="/loginadmin" />
-      }
+      // if (this.props.adminConnected === false || this.props.adminConnected == null){
+      //    return <Redirect to="/loginadmin" />
+      // }
       
       return(
 <div style={{fontFamily:"Raleway"}}>
@@ -312,7 +316,19 @@ class Dashboard extends Component {
                 </Col>  
             </Form.Group>
 
-          
+            <Form.Group as={Row}>
+                <Col sm={6}>
+                  <Form.Control type="text" placeholder="Code postal" onChange={(e)=> this.setState({CreateEventZipCode: e.target.value})}
+                        value={this.state.CreateEventZipCode} />
+                </Col>  
+            
+             
+                <Col sm={6}>
+                  <Form.Control type="text" placeholder="Ville" onChange={(e)=> this.setState({CreateEventCity: e.target.value})}
+                        value={this.state.CreateEventCity}/>
+                </Col>  
+            </Form.Group>
+
 
             <Form.Group as={Row} controlId="formHorizontalSize">
                 <Col sm={4}>

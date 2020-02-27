@@ -24,6 +24,7 @@ class Events extends Component{
     })
     .then(function(data){
       ctx.setState({events: data.allEvents, pastEvents: data.allPastEvents})
+      
     })
     .catch(function(error) {
       console.log('Request failed ->', error)
@@ -36,6 +37,8 @@ class Events extends Component{
       return <Event key={i}
         eventName={event.name}
         eventAddress={event.address}
+        eventZipCode={event.zip_code}
+        eventCity={event.city}
         eventDate={event.date}
         eventStart={event.starting_time}
         eventEnd={event.ending_time}
@@ -48,6 +51,8 @@ class Events extends Component{
       return <PastEvent key={i}
         eventName={event.name}
         eventAddress={event.address}
+        eventZipCode={event.zip_code}
+        eventCity={event.city}
         eventDate={event.date}
         eventStart={event.starting_time}
         eventEnd={event.ending_time}
