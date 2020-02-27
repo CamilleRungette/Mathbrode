@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import { Button,  Navbar, NavbarBrand,  Nav,  NavItem,  NavLink, DropdownMenu, DropdownItem, DropdownToggle, Dropdown } from 'reactstrap';
 import {Link} from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faHome, faShoppingCart, faCalendarAlt, faCut, faUser, faBoxOpen, faShoppingBasket} from '@fortawesome/free-solid-svg-icons'
 import '../App.css'
 
 class Navigbar extends React.Component{
@@ -33,7 +33,7 @@ class Navigbar extends React.Component{
     <Navbar expand="md" style={{fontFamily:"Roboto", width: "95%", height:"12*5em" , display:"flex", justifyContent:"space-between", margin:"auto",padding:"0"}}>
         <div xs="2" style={{textAlign:"right"}}>
             <NavbarBrand>
-              <Link to="/"><img src="/logo-bis.png" alt="logo" style={{width:"5.3em"}} /> </Link>
+              <Link to="/"><img src="/logo-bis.png" alt="logo" style={{width:"6.4em"}} /> </Link>
             </NavbarBrand>
         </div>
 
@@ -60,34 +60,33 @@ class Navigbar extends React.Component{
       </Dropdown>
       </div>
     
-        <div xs="10" class="menu" >
+        <div className="menu">
             <Nav navbar style={{fontSize:"1.4em"}}> 
 
             {this.props.connected ? (
               <div></div>
             ):(
                 <NavItem>
-                  <Link class="navb-link" to="/"><NavLink>Accueil</NavLink> </Link>
+                  <Link class="navb-link" to="/"><NavLink><FontAwesomeIcon icon={faHome}/> Accueil</NavLink> </Link>
                 </NavItem>
             )}
 
                 <NavItem>
-                  <Link class="navb-link" to="/shop"> <NavLink>Boutique</NavLink></Link>
+                  <Link class="navb-link" to="/shop"><NavLink><FontAwesomeIcon icon={faShoppingCart} /> Boutique</NavLink></Link>
                 </NavItem>
 
                 <NavItem>
-                  <Link class="navb-link" to="/events"> <NavLink>Événements</NavLink></Link>
+                <Link class="navb-link" to ="/classes"><NavLink><FontAwesomeIcon icon={faCut} /> Ateliers</NavLink></Link>
                 </NavItem>
 
                 <NavItem>
-                <Link class="navb-link" to ="/classes"><NavLink>Ateliers</NavLink></Link>
+                  <Link class="navb-link" to="/events"><NavLink><FontAwesomeIcon icon={faCalendarAlt} /> Événements</NavLink></Link>
                 </NavItem>
-
                  
                 
                 {this.props.connected ? (
                 <NavItem>
-                  <Link class="navb-link" to ="/profil" > <NavLink>Mon profil</NavLink> </Link>
+                  <Link class="navb-link" to ="/profil" ><NavLink><FontAwesomeIcon icon={faUser} /> Mon profil</NavLink> </Link>
                 </NavItem>
                 ):(
                   <div></div>
@@ -96,7 +95,7 @@ class Navigbar extends React.Component{
 
                 {this.props.connected ? (
                 <NavItem>
-                  <Link class="navb-link" to ="/myorders" > <NavLink>Mes commandes</NavLink> </Link>
+                  <Link class="navb-link" to ="/myorders" > <NavLink><FontAwesomeIcon icon={faBoxOpen} /> Mes commandes</NavLink> </Link>
                 </NavItem>
                 ):(
                   <div></div>
@@ -107,7 +106,7 @@ class Navigbar extends React.Component{
                 {this.props.connected ? (
             
                 <NavItem>
-                  <Link class="navb-link" to ="/basket" > <NavLink>Panier</NavLink> </Link>
+                  <Link class="navb-link" to ="/basket" > <NavLink><FontAwesomeIcon icon={faShoppingBasket} /> Panier</NavLink> </Link>
                 </NavItem>
                 ):(
                   <div></div>

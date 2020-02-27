@@ -141,10 +141,7 @@ class Profil extends Component{
                       <h6> Chargement ...</h6>
                     ) : (null)}
                     {this.state.loading === false? (
-                      <div>
-                        <img src={this.state.photo} alt="Profile" style={{width:"7em", marginTop:'2%', marginRight:"5%"}} />
                         <Button className="btn-warning" style={{color:"white"}} onClick={this.updatePhoto}> Valider </Button>
-                      </div>
                     ):(null)}
                     </Form.Group>
                     </Form>

@@ -91,7 +91,7 @@ onDrop(picture) {
               <CardBody >
                 <div style={{display:"flex", justifyContent:"space-between", marginBottom:"0.6em"}} >
                 <Link to="/classes" ><CardTitle style={{ fontSize:"1.2em", color:"black", fontFamily:"Roboto"}} ><strong>Atelier d'initiation</strong> </CardTitle></Link>
-                <FontAwesomeIcon icon={faCalendarAlt} className="fa-2x"/>
+                <FontAwesomeIcon icon={faCut} className="fa-2x"/>
                 </div>
                   <CardText>Je vous propose de vous initier aux bases de la broderie pendant un cours de 2h. Réservez-votre créneau</CardText>
                 </CardBody>
@@ -103,7 +103,7 @@ onDrop(picture) {
               <CardBody onClick={this.handleShow} >
                 <div style={{display:"flex", justifyContent:"space-between", marginBottom:"0.6em"}} >
                 <CardLink style={{ fontSize:"1.2em", fontFamily:"Roboto"}} ><strong>Projets personnalisés</strong> </CardLink>
-                <FontAwesomeIcon icon={faCut} className={"fa-2x"}/>
+                <FontAwesomeIcon icon={faHandshake} className={"fa-2x"}/>
                 </div>
                   <CardText>Une idée de modèle ? Vous pouvez me contacter pour des projets personnels. Dessins, prénom, couronnes .. Demandez-moi</CardText>
                 </CardBody>
@@ -115,7 +115,7 @@ onDrop(picture) {
               <CardBody >
                 <div style={{display:"flex", justifyContent:"space-between", marginBottom:"0.6em"}} >
                 <Link to="/events"> <CardTitle style={{ color: "black", fontSize:"1.2em", fontFamily:"Roboto"}} ><strong>Rencontrez-moi</strong> </CardTitle> </Link>
-                <FontAwesomeIcon icon={faHandshake} className={"fa-2x"}/>
+                <FontAwesomeIcon icon={faCalendarAlt} className={"fa-2x"}/>
                 </div>
                  <CardText>Venez me rencontrer directement sur les marchés auxquels je participe régulièrement.</CardText>
                 </CardBody>

@@ -7,7 +7,6 @@ import Service from './Service'
 import Footer from './Footer'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {connect} from 'react-redux';
-
  
 class Home extends React.Component {
 
@@ -15,22 +14,17 @@ class Home extends React.Component {
 
     return (
       <div className="col-lg-12 principal-body" style={{paddingLeft:"0px", paddingRight:"0px"}}>
+        <div className="row" style={{margin:"auto"}}>
+          <Navigbar  />
+            <div className="col-lg-12 home-container" style={{paddingLeft:0,paddingRight:0}}>            
+                <img class="back-img" src="./background2.jpeg" alt="background" />    
+                <div className="text-block">
+                  <p>Broderie Moderne</p>
+                </div>
+            </div>
+        </div>
+        <div style={{marginBottom:"10em"}} ></div>
 
-
-
-          <div className="row" style={{margin:"auto"}}>
-        <Navigbar/>
-              <div className="col-lg-12 home-container" style={{paddingLeft:0,paddingRight:0}}>            
-                  <img class="back-img" src="./background2.jpeg" alt="background" />
-      
-                  <div className="text-block">
-                    <p>Broderie Moderne</p>
-                  </div>
-              </div>
-          </div>
-          <div style={{marginBottom:"10em"}} ></div>
-
-    
 
       <Creations/>
       <div style={{marginBottom:"20em"}} ></div>
@@ -41,7 +35,6 @@ class Home extends React.Component {
       <p style={{color:"transparent"}}></p></div>
 
       <Footer/>
-
 </div>
 
         )
