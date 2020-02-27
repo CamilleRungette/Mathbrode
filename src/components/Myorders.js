@@ -43,11 +43,9 @@ class MyOrders extends Component{
       return(
         <div>
           <Navbar />
-          <div style={{fontFamily:"Open Sans", height:"75vh"}}>
+          <div style={{fontFamily:"Open Sans", minHeight:"85vh"}}>
           <div style={{height:"7em"}}></div>
-            <div style={{textAlign:"center", fontSize:"3.3em"}}>
-              <h1 className="order-title">Mes Commandes</h1>
-            </div>
+              <h1 style={{textAlign:"center", marginTop:"0.5em"}}>Mes Commandes</h1>
             <div style={{height:"8em"}}></div>
 
           <div style={{fontSize:"2em", textAlign:"center"}}>
@@ -65,9 +63,7 @@ class MyOrders extends Component{
       <div style={{fontFamily:"Open Sans "}}>
         <Navbar/>
         <div style={{height:'7em'}}></div>
-        
-              <h1 style={{textAlign:"center", marginTop:'0.5em'}}>Mes Commandes</h1>
-          
+          <h1 style={{textAlign:"center", marginTop:'0.5em'}}>Mes Commandes</h1>
         <div style={{height:'8em'}}></div>
 
         {this.state.myOrders.map((order, i)=>(

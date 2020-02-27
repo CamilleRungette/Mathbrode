@@ -43,12 +43,10 @@ class Basket extends React.Component {
         return(
           <div>
             <Navbar />
-            <div style={{fontFamily:"Open Sans", height:"84vh"}}>
-            <div style={{height:"13em"}}></div>
-              <div style={{textAlign:"center", fontSize:"3.3em"}}>
-                <h1 className="order-title">Mon Panier</h1>
-              </div>
-              <div style={{height:"5em"}}></div>
+            <div style={{fontFamily:"Open Sans", minHeight:"85vh"}}>
+              <div style={{height:"7em"}}></div>
+            <h1 style={{textAlign:"center", marginTop:"0.5em"}}>Mon Panier</h1>
+              <div style={{height:"8em"}}></div>
 
             <div style={{fontSize:"2em", textAlign:"center"}}>
               <p>Ton panier est vide </p>
@@ -71,12 +69,10 @@ class Basket extends React.Component {
     <div style={{fontFamily:"Open Sans"}}>
       <Navbar/>
             <div>
-            <div style={{height:"10em"}}></div>
+            <div style={{height:"7em"}}></div>
 
-            <div style={{textAlign:"center", fontSize:"3.3em"}}>
-              <h1 className="order-title">Mon Panier</h1>
-            </div>
-            <div style={{height:"5em"}}></div>
+              <h1 style={{textAlign:"center", marginTop:'0.5em'}} >Mon Panier</h1>
+            <div style={{height:"8em"}}></div>
       {this.props.item.map((item, i) =>(
             <div className="col-lg-8 col-xs-11 col-md-10 border" style={{display:"flex", alignItems:"center", margin:"auto", fontSize:"1.3em", paddingRight:"3em", minWidth:"25em"}}>
             <img src={item.photo} className="col-md-4 col-xs-12" style={{marginLeft:"-1.5em", minHeight:"11em", objectFit:"contain", minWidth:'9em'}} alt="Alt text" /> 
@@ -116,7 +112,7 @@ class Basket extends React.Component {
       <div style={{height:"5em"}}></div>
       <div className="d-flex justify-content-center col-lg-12">  
         <div className="justify-content-center col-lg-6">          
-          <Link to="/creations" ><Button color="secondary" >Continuer mes Achats</Button></Link>
+          <Link to="/shop" ><Button color="secondary" >Continuer mes Achats</Button></Link>
         </div>
         <div>
        <Link to="/checkout"> <Button style={{backgroundColor:"#1B263B", fontSize:"1.2em"}} onClick={()=> this.props.onOrderClick(this.state.total, this.state.in_person)} >Confirmer</Button></Link>

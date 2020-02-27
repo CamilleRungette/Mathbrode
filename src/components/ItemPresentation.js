@@ -71,15 +71,14 @@ class ItemPresentation extends React.Component {
   <Navbar/>
     <div className="row justify-content-center" style={{fontFamily:"Open Sans"}}>
       <div className="col-lg-10" >
-      <div style={{height:"10em"}}></div>
-        <div>
-          <h1 style={{textAlign:"center", fontSize:"4em", marginBottom:"4%"}}>{this.state.name}</h1>
-        </div>
+      <div style={{height:"7em"}}></div>
+          <h1 style={{textAlign:"center", marginTop:"0.5em"}}>{this.state.name}</h1>
+        <div style={{height:"8em"}}></div>
 
         <div className="row col-lx-6 col-lg-9 col-xs-11 " style={{margin:"auto", fontSize:'1.1em'}} >
         <div class="hover mb-3">
           <div class="zoom mb-4">
-            <img src={this.state.photo} className=" col-lg-8" style={{height:"40em", objectFit:"contain", margin:"auto"}} alt="Alt text" />
+            <img src={this.state.photo} className=" col-lg-8" style={{height:"40em", objectFit:"contain", margin:"auto"}} alt={this.state.name} />
           </div>
         </div>
           <div className="col-sm-11 col-md-10" style={{margin:"auto"}}>
@@ -156,7 +155,6 @@ function mapStatetoProps(state){
 function mapDispatchToProps(dispatch){
   return{
     onBuyClick: function(data){
-      console.log("info envoyée au reducer", data)
       dispatch({type: 'carted', item: data})
     }
   }

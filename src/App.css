@@ -64,10 +64,6 @@ body{
   position: relative;
 }
 
-.order-title{
-  font-size: 200% !important;
-}
-
 /* Bottom right text */
 .text-block {
   z-index: 1;

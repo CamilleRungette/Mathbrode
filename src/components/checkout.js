@@ -108,8 +108,8 @@ class CheckoutForm extends Component {
       <div style={{fontFamily:'Open Sans'}}>
         <Navbar/>
           <div style={{minHeight:"85vh"}}>
-            <div style={{height:'10em'}}></div>
-            <h1 style={{textAlign:'center', fontSize:'3.5em'}}>Paiement</h1>
+            <div style={{height:'7em'}}></div>
+            <h1 style={{textAlign:'center', marginTop:'0.5em'}}>Paiement</h1>
             <div style={{height:'8em'}}></div>
               <div className="border col-xl-6 col-lg-8 col-sm-10 col-xs-11" style={{margin:'auto', padding:'2em', fontSize:'1.2em', display:'flex', flexDirection:"column"}}>
                 <h3 style={{textAlign:"center"}}>Montant de la commande:  {this.props.total.total? (this.props.total.total):(this.props.persoOrder.total) } €</h3>
