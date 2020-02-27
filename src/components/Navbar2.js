@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import { Button,  Navbar, NavbarBrand,  Nav,  NavItem,  NavLink, DropdownMenu, DropdownItem, DropdownToggle, Dropdown } from 'reactstrap';
-import {Link} from 'react-router-dom'
+import {Link, Redirect} from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import '../App.css'
@@ -33,7 +33,7 @@ class Navigbar2 extends React.Component{
     <Navbar expand="md" light style={{fontFamily:"Roboto", width: "95%", height:"12*5em" , display:"flex", justifyContent:"space-between", margin:"auto",padding:"0"}}>
         <div xs="2" style={{textAlign:"right"}}>
             <NavbarBrand>
-              <Link to="/"><img src="/logo bis.png" alt="logo" style={{width:"5.3em"}} /> </Link>
+              <Link to="/"><img src="/logo-bis.png" alt="logo" style={{width:"5.3em"}} /> </Link>
             </NavbarBrand>
         </div>
 
@@ -51,7 +51,7 @@ class Navigbar2 extends React.Component{
           <Link to="/profil" style={{fontSize:'1.2em'}}><DropdownItem>Mon profil</DropdownItem></Link>
           <Link to="/myorders" style={{fontSize:'1.2em'}}><DropdownItem>Mes commandes</DropdownItem></Link>
           <Link to="/basket" style={{fontSize:'1.2em'}}><DropdownItem >Panier</DropdownItem></Link>
-          <Button color="secondary" style={{marginLeft:'1em', fontSize:"1.2em"}} id="dropHover" onClick={this.LogOut}>Se Déconnecter</Button>
+          <Link to="/"><Button color="secondary" style={{marginLeft:'1em', fontSize:"1.2em"}} id="dropHover" onClick={this.LogOut}>Se Déconnecter</Button></Link>
           </span>
           ):(
             <Link to="/login" className="login-button"> <Button color="secondary "style={{marginLeft:'1em', fontSize:"1.1em"}}> Mon compte</Button></Link>
@@ -118,7 +118,7 @@ class Navigbar2 extends React.Component{
                 <NavItem>
                 {this.props.connected ? (
                   <div>
-                  <Button color="secondary" style={{fontSize:"1em"}} onClick={this.LogOut}>Se Déconnecter</Button>
+                  <Link to="/"><Button color="secondary" style={{fontSize:"1em"}} onClick={this.LogOut}>Se Déconnecter</Button></Link>
                   </div>
                 ):(
                   <Link className="login-button" to="/login"><Button color="secondary" style={{fontSize:"1em"}}> Mon compte </Button></Link>

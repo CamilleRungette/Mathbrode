@@ -22,7 +22,10 @@ class Profil extends Component{
     this.handleShow = this.handleShow.bind(this)
     this.handleClose = this.handleClose.bind(this)
     this.handleSubmitUpdate = this.handleSubmitUpdate.bind(this)
+    this.uploadPhoto = this.uploadPhoto.bind(this)
+    this.updatePhoto = this.updatePhoto.bind(this)
     this.state={
+      loading: "",
       id:this.props.userSigned._id,
       first_name: this.props.userSigned.first_name ,
       last_name: this.props.userSigned.last_name,
@@ -31,6 +34,7 @@ class Profil extends Component{
       zipcode: this.props.userSigned.zip_code,
       city: this.props.userSigned.city,
       details: this.props.userSigned.details,
+      photo: this.props.userSigned.photo,
       show: false,
     }
   }
@@ -69,9 +73,41 @@ class Profil extends Component{
     })
   }
 
+  async uploadPhoto(e){
+    const files = e.target.files
+    const data= new FormData()
+    data.append('file', files[0])
+    data.append('upload_preset', 'camille')
+    this.setState({loading: true})
+    const res = await fetch('https://api.cloudinary.com/v1_1/dduugb9jy/image/upload', {
+        method: 'POST',
+        body: data
+      })
+    const file = await res.json()
+    
+    this.setState({photo: file.secure_url})
+    this.setState({loading: false})
+  }
+
+  updatePhoto(){
+    let ctx = this;
+    fetch(`${ip}/users/update-photo`,{
+      method: 'POST',
+      headers: {'Content-Type':'application/x-www-form-urlencoded'},
+      body: `id=${this.state.id}&photo=${this.state.photo}`
+    })
+    .then(function(response){
+      return response.json()
+    })
+    .then(function(data){
+      ctx.setState({photo: data.photo, loading: ""})
+    })
+  }
+
+
 
   render(){
-    console.log("USER", this.props.connected)
+    console.log("USER", this.state.photo)
     if (this.props.connected === false || this.props.connected === null){
       return <Redirect to="/" />
     }
@@ -87,8 +123,32 @@ class Profil extends Component{
             <div style={{height:"4em"}}></div>
 
               <div style={{borderTop:"1px solid #D3D3D3", borderBottom:"1px solid #D3D3D3"}}>
-                <div style={{display:'flex', justifyContent:"space-around", height:"45vh", alignItems:"center", width:"70%", margin:"auto"}}>
-                  <img src="/presentation.png" style={{width:'18em', height:'18em', objectFit:"cover", borderRadius:'50%'}} />
+                <div style={{display:'flex', justifyContent:"space-around", minHeight:"45vh", alignItems:"center", width:"70%", margin:"auto"}}>
+                  <div>
+                    {this.state.photo === "" || this.state.photo === undefined ?(
+                      <img src="/logo-bis.png" style={{width:'18em', height:'18em', objectFit:"cover", borderRadius:'50%', marginBottom:'6%'}} />
+                      ):(
+                        <img src={this.state.photo} style={{width:'18em', height:'18em', objectFit:"cover", borderRadius:'50%', marginBottom:'6%'}} />
+                      )}
+                    <Form>
+                      <Form.Group>
+                      <Form.Label style={{marginLeft:"20%",fontSize:'110%', fontWeight:'bold'}}>Choisir une photo</Form.Label><br/>
+                    <input type="file"
+                    placeholder=""
+                    onChange={this.uploadPhoto} 
+                    /> 
+                    {this.state.loading ? (
+                      <h6> Chargement ...</h6>
+                    ) : (null)}
+                    {this.state.loading === false? (
+                      <div>
+                        <img src={this.state.photo} alt="Profile" style={{width:"7em", marginTop:'2%', marginRight:"5%"}} />
+                        <Button className="btn-warning" style={{color:"white"}} onClick={this.updatePhoto}> Valider </Button>
+                      </div>
+                    ):(null)}
+                    </Form.Group>
+                    </Form>
+                  </div>
                   <div style={{fontSize:"1.2em"}}>
                     <div> <span style={titre}>Nom:</span> <br/>{this.props.userSigned.first_name} {this.props.userSigned.last_name} </div>
                     <div> <span style={titre}>Adresse e-mail:</span> <br/> {this.props.userSigned.email}</div>
@@ -96,7 +156,7 @@ class Profil extends Component{
                       
                     {this.props.userSigned.address}
                     {this.state.zipcode != null?(
-                      <div>{this.state.zipcode}, {this.state.city} <br/>
+                      <div> {this.state.zipcode}, {this.state.city} <br/>
                       {this.state.details} </div>
                      ):(
                       <div></div>
