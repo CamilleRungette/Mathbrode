@@ -80,35 +80,33 @@ class Profil extends Component{
       <div>
         <div style={{fontFamily:"Open Sans"}}>
           <Navbar/>
-          <div >
-          <div style={{height:"8em"}}></div>
-          <Card className="col-xl-5 col-sm-8  col-xs-11 mx-auto"  style={{marginTop:"8em"}}>
-          <h1 style={{textAlign:"center", fontSize:"3em", marginTop:'1em'}}>Ton Profil</h1>
-          <div style={{height:"1em"}}></div>
-            <div>
-              <div style={{fontSize:'1.8em', textAlign:'center'}} >Salut {this.props.userSigned.first_name} !</div>
-              <div style={{marginTop: "3em"}}>
-                <div className="col-8 border" style={{margin:"auto", padding:"2em"}}>
-                  <h4 style={{textAlign:"center"}} >Voilà tes infos :</h4>
+          <div style={{height:"7em"}}></div>
+          <h1 style={{textAlign:"center", marginTop:'0.5emem'}}>Ton Profil</h1>
+          <div style={{height:"4em"}}></div>
+            <div style={{fontSize:'1.8em', textAlign:'center'}} >Salut {this.props.userSigned.first_name} ! Voilà tes infos:</div>
+            <div style={{height:"4em"}}></div>
+
+              <div style={{borderTop:"1px solid #D3D3D3", borderBottom:"1px solid #D3D3D3"}}>
+                <div style={{display:'flex', justifyContent:"space-around", height:"45vh", alignItems:"center", width:"70%", margin:"auto"}}>
+                  <img src="/presentation.png" style={{width:'18em', height:'18em', objectFit:"cover", borderRadius:'50%'}} />
                   <div style={{fontSize:"1.2em"}}>
                     <div> <span style={titre}>Nom:</span> {this.props.userSigned.first_name} {this.props.userSigned.last_name} </div>
                     <div> <span style={titre}>Adresse e-mail:</span> {this.props.userSigned.email}</div>
                       <div><span style={titre}>Adresse postale:</span></div>
                       
-                     {this.props.userSigned.address}
-                     {this.state.zipcode != null?(
-                       <div>{this.state.zipcode}, {this.state.city} <br/>
-                       {this.state.details} </div>
+                    {this.props.userSigned.address}
+                    {this.state.zipcode != null?(
+                      <div>{this.state.zipcode}, {this.state.city} <br/>
+                      {this.state.details} </div>
                      ):(
                       <div></div>
-                     )}
-                     <br/>
-                     <div style={{textAlign:"center"}}>
+                    )} 
+                    <br/>
+                    <div style={{textAlign:"center"}}>
                       <Button style={{backgroundColor:"#1B263B", border:"none", fontSize:"1.1em"}}  onClick={this.handleShow}>Modifier</Button>
                     </div>
-               </div>
-                 </div>
-              </div>
+                  </div>
+                </div>
 
 
               <Modal show={this.state.show} onHide={this.handleClose} className="col-lg-10" >
@@ -176,8 +174,7 @@ class Profil extends Component{
 
             </div>
             <div style={{height:"6em"}}></div>
-            </Card>
-            </div>
+
             <div style={{height:"8em"}}></div>
           <Footer/>
         </div>     
