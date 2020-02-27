@@ -88,9 +88,9 @@ class Classes extends Component{
     return(
     <div style={{fontFamily:"Open Sans"}}>
       <Navbar/>
-      <div style={{height:"8em"}}></div>
+      <div style={{height:"7em"}}></div>
       <Col sm={11} style={{margin:"auto"}}>
-      <h1 style={{textAlign:"center", fontSize:"3.5em", marginTop:"0.5em"}}>Les Ateliers</h1>
+      <h1 style={{textAlign:"center", marginTop:"0.5em"}}>Les Ateliers</h1>
       <div style={{height:"8em"}}></div>
       <div style={{margin:"auto", display:"flex", justifyContent:"space-around", flexWrap:"wrap"}}>
       {this.state.workshops.map((workshop, i) =>(

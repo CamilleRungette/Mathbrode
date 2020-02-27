@@ -66,9 +66,9 @@ class Events extends Component{
     <div >
 
       <Navigbar/>
-        <div style={{height:"10em"}}></div>
+        <div style={{height:"7em"}}></div>
         <div style={{minHeight:"65vh"}}>
-            <h1 style={{textAlign:"center", fontSize:"3.5em", marginTop:"0.5em"}} >Mes Événements</h1>
+            <h1 style={{textAlign:"center", marginTop:"0.5em"}} >Mes Événements</h1>
             <div style={{height:"8em"}}></div>
             <h2 class="past-event-title">À venir:</h2>
              <div style={{display:"flex", flexWrap:"wrap", justifyContent:"space-between", margin:"auto"}} className="col-9">

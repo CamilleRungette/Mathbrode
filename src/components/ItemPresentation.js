@@ -96,7 +96,7 @@ class ItemPresentation extends React.Component {
                 </Col>
             </Row>          
               <div className="d-flex justify-content-center my-4" >
-              <Link to="/items"><Button color="secondary" style={{marginRight:"2em", fontSize:'1.2em'}}> Retour </Button></Link>
+              <Link to="/shop"><Button color="secondary" style={{marginRight:"2em", fontSize:'1.2em'}}> Retour </Button></Link>
                 {this.props.user == null ? (
                   <Link to="/login" ><Button style={{backgroundColor:"#1b263b", fontSize:'1.2em'}}>Ajouter au panier</Button></Link>
                 ):(

@@ -6,6 +6,7 @@ import {Card, Button} from 'react-bootstrap'
 import { connect } from 'react-redux';
 import {Redirect, Link} from 'react-router-dom'
 import ip from './ip'
+import '../App.css'
 
  
 class MyOrders extends Component{
@@ -43,11 +44,11 @@ class MyOrders extends Component{
         <div>
           <Navbar />
           <div style={{fontFamily:"Open Sans", height:"75vh"}}>
-          <div style={{height:"10em"}}></div>
+          <div style={{height:"7em"}}></div>
             <div style={{textAlign:"center", fontSize:"3.3em"}}>
               <h1 className="order-title">Mes Commandes</h1>
             </div>
-            <div style={{height:"5em"}}></div>
+            <div style={{height:"8em"}}></div>
 
           <div style={{fontSize:"2em", textAlign:"center"}}>
             <p>Tu n'as passé aucune commande </p>
@@ -63,14 +64,14 @@ class MyOrders extends Component{
       return(
       <div style={{fontFamily:"Open Sans "}}>
         <Navbar/>
-        <div style={{height:'10em'}}></div>
-        <div style={{textAlign:"center", fontSize:"3.3em"}}>
-              <h1 className="order-title">Mes Commandes</h1>
-            </div>
-        <div style={{height:'5em'}}></div>
+        <div style={{height:'7em'}}></div>
+        
+              <h1 style={{textAlign:"center", marginTop:'0.5em'}}>Mes Commandes</h1>
+          
+        <div style={{height:'8em'}}></div>
 
         {this.state.myOrders.map((order, i)=>(
-        <Card className="col-8 mx-auto" style={{margin:"5em", minWidth:'30em' }} >
+        <Card className="col-8 mx-auto" style={{minWidth:'30em' }} >
           <Card.Body  >
             <Card.Title><h2>Commande du {DateFormat(order.date)} </h2></Card.Title>
             <Card.Subtitle className="mb-2 text-muted"># {order._id} </Card.Subtitle>

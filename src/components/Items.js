@@ -47,13 +47,13 @@ class Items extends Component{
       <div  style={{fontFamily:"Raleway"}}>
       <Navigbar/>
 
-      <div style={{height:"10em"}}></div>
+      <div style={{height:"7em"}}></div>
 
       <Col style={{margin:"auto"}}>
           <div className="col-6" style={{ margin:"auto", display:"flex", justifyContent:"center",flexWrap:"wrap"}} >
           <h1 style={{textAlign:"center", fontSize:"4em", marginTop:"0.5em"}}>La Boutique</h1>
           </div>
-          <div style={{height:"6em"}}></div>
+          <div style={{height:"8em"}}></div>
 
         <div className="col-lg-10 col-xs-11" style={{ margin:"auto", display:"flex", flexWrap:"wrap"}}>     
             {itemsList}

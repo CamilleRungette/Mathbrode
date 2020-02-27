@@ -43,7 +43,7 @@ class Navigbar extends React.Component{
           <FontAwesomeIcon className={"fa-4x"} icon={faBars} />
         </DropdownToggle>
         <DropdownMenu >
-          <Link to="/items" style={{fontSize:'1.2em'}}><DropdownItem>Boutique</DropdownItem></Link> 
+          <Link to="/shop" style={{fontSize:'1.2em'}}><DropdownItem>Boutique</DropdownItem></Link> 
           <Link to="/events" style={{fontSize:'1.2em'}}> <DropdownItem >Événements</DropdownItem></Link>
           <Link to="/classes" ><DropdownItem style={{fontSize:'1.2em'}}>Ateliers</DropdownItem></Link>
           {this.props.connected ? (
@@ -72,7 +72,7 @@ class Navigbar extends React.Component{
             )}
 
                 <NavItem>
-                  <Link class="navb-link" to="/items"> <NavLink>Boutique</NavLink></Link>
+                  <Link class="navb-link" to="/shop"> <NavLink>Boutique</NavLink></Link>
                 </NavItem>
 
                 <NavItem>
