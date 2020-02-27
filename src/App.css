@@ -312,6 +312,12 @@ html {
   
 }
 
+.past-event-title{
+  /* margin-left: 8%; */
+  text-align: center;
+  font-family: 'Amatic SC', 'Open Sans', "Arial" ;
+  font-size: 450%;
+}
 
 .navb-link{
   color:white !important;
