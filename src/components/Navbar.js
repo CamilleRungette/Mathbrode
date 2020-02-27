@@ -54,7 +54,7 @@ class Navigbar extends React.Component{
           <Button color="secondary" style={{marginLeft:'1em', fontSize:"1.2em"}} id="dropHover" onClick={this.LogOut}>Se Déconnecter</Button>
           </span>
           ):(
-            <Button color="secondary "style={{marginLeft:'1em', fontSize:"1.1em"}}> <Link to="/login" className="login-button"> Mon compte </Link></Button>
+            <Link to="/login" className="login-button"><Button color="secondary "style={{marginLeft:'1em', fontSize:"1.1em"}}> Mon compte </Button></Link>
           )}
         </DropdownMenu>
       </Dropdown>
@@ -121,7 +121,7 @@ class Navigbar extends React.Component{
                   <Button color="secondary" style={{fontSize:"1em"}} onClick={this.LogOut}>Se Déconnecter</Button>
                   </div>
                 ):(
-                  <Button color="secondary" style={{fontSize:"1em"}}><Link className="login-button" to="/login"> Mon compte </Link></Button>
+                  <Link className="login-button" to="/login"><Button color="secondary" style={{fontSize:"1em"}}> Mon compte </Button></Link>
                 )}
                 </NavItem>
 

@@ -90,8 +90,8 @@ class Profil extends Component{
                 <div style={{display:'flex', justifyContent:"space-around", height:"45vh", alignItems:"center", width:"70%", margin:"auto"}}>
                   <img src="/presentation.png" style={{width:'18em', height:'18em', objectFit:"cover", borderRadius:'50%'}} />
                   <div style={{fontSize:"1.2em"}}>
-                    <div> <span style={titre}>Nom:</span> {this.props.userSigned.first_name} {this.props.userSigned.last_name} </div>
-                    <div> <span style={titre}>Adresse e-mail:</span> {this.props.userSigned.email}</div>
+                    <div> <span style={titre}>Nom:</span> <br/>{this.props.userSigned.first_name} {this.props.userSigned.last_name} </div>
+                    <div> <span style={titre}>Adresse e-mail:</span> <br/> {this.props.userSigned.email}</div>
                       <div><span style={titre}>Adresse postale:</span></div>
                       
                     {this.props.userSigned.address}
@@ -102,10 +102,8 @@ class Profil extends Component{
                       <div></div>
                     )} 
                     <br/>
-                    <div style={{textAlign:"center"}}>
                       <Button style={{backgroundColor:"#1B263B", border:"none", fontSize:"1.1em"}}  onClick={this.handleShow}>Modifier</Button>
-                    </div>
-                  </div>
+                   </div>
                 </div>
 
 
