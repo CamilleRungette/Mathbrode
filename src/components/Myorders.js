@@ -96,9 +96,7 @@ class MyOrders extends Component{
         </Card>
         ))}
 
-<div style={{textAlign:"center", fontSize:"3.3em"}}>
-              <h1 className="order-title">Mes Commandes personnalisées</h1>
-            </div>
+              <h1 style={{textAlign:"center"}}>Mes Commandes personnalisées</h1>
         <div style={{height:'5em'}}></div>
 
         {this.state.myPersoOrders.map((order, i)=>(

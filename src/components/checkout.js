@@ -24,13 +24,10 @@ class CheckoutForm extends Component {
   }
 
   async orderSubmit(ev) {
-    console.log("helolololo")
     let {token} = await this.props.stripe.createToken({name: "Name"})
     .then(function(result){
-      console.log(result);
-      
+      console.log("result");   
     })
-    console.log(token)
     let response = await fetch(`${ip}/charge`, {
       method: "POST",
       headers: {"Content-Type": "text/plain"},
@@ -54,10 +51,8 @@ class CheckoutForm extends Component {
   }
 
   async persoOrderSubmit(ev){
-    console.log("helolololo2")
 
     let {token} = await this.props.stripe.createToken({name: "Name"});
-    console.log(token)
     let response = await fetch(`${ip}/charge`, {
       method: "POST",
       headers: {"Content-Type": "text/plain"},
