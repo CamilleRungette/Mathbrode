@@ -39,7 +39,7 @@ class MyOrders extends Component{
   render(){
     if (this.props.connected === false || this.props.connected === null){
       return <Redirect to="/" />
-    }else if (this.state.myOrders.length === 0){
+    }else if (this.state.myOrders.length === 0 && this.state.myPersoOrders.length === 0) {
       return(
         <div>
           <Navbar />
@@ -58,10 +58,16 @@ class MyOrders extends Component{
         </div>
       )
 
-        } else{
+        } else {
       return(
       <div style={{fontFamily:"Open Sans "}}>
         <Navbar/>
+        {this.state.myOrders.length === 0?(
+          <div></div>
+        ):(
+          <div>
+
+            
         <div style={{height:'7em'}}></div>
           <h1 style={{textAlign:"center", marginTop:'0.5em'}}>Mes Commandes</h1>
         <div style={{height:'8em'}}></div>
@@ -96,8 +102,19 @@ class MyOrders extends Component{
         </Card>
         ))}
 
+      </div>
+      )}
+
+      
+      {this.state.myPersoOrders.length === 0 ?(
+        <div></div>
+      ):(
+
+        <div>
+        <div style={{height: "7em"}}></div>
+        <div style={{height: "7em"}}></div>
               <h1 style={{textAlign:"center"}}>Mes Commandes personnalisées</h1>
-        <div style={{height:'5em'}}></div>
+        <div style={{height:'8em'}}></div>
 
         {this.state.myPersoOrders.map((order, i)=>(
         <Card className="col-8 mx-auto" style={{margin:"5em", minWidth:'30em' }} >
@@ -135,6 +152,8 @@ class MyOrders extends Component{
           </Card.Body>
         </Card>
         ))}
+        </div>
+        )}
 
 
         <div style={{height:'5em'}}></div>

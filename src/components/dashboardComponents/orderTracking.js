@@ -34,20 +34,10 @@ class tracking extends React.Component{
     this.handleCreateClose = this.handleCreateClose.bind(this)
     this.persoOrderCreate = this.persoOrderCreate.bind(this)
     this.state={
-      orders:[],
       show: false,
-      items: [],
-      order: [],
-      user: [],
-      sent: '',
+      orders:[], items: [], order: [], user: [], sent: '',
       createShow:false,
-      persoShow: false,
-      persoOrderUser :'',
-      persoOrderTotal: '',
-      persoOrderInPerson: false,
-      persoOrderPhoto: '',
-      persoOrderShippingFee: '',
-      persoOrderDesc: '',
+      persoShow: false, persoOrderUser :'', persoOrderTotal: '', persoOrderInPerson: false, persoOrderPhoto: '', persoOrderShippingFee: '', persoOrderDesc: '',
       loading: false,
       persoOrders: [],
     }

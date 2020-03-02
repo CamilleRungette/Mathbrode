@@ -46,7 +46,7 @@ this.state = {
         return(
           <div>
           <Navbar></Navbar>
-            <div class="container" style={{marginTop:'5em', fontFamily:"Raleway"}}>
+            <div class="container" style={{marginTop:'5em', fontFamily:"Open Sans"}}>
             <Row style={{justifyContent:"space-around"}}>
             <Col lg={5} md={8}>
               <h3 style={{marginBottom:"2em", textAlign:'center'}}>Se connecter</h3>

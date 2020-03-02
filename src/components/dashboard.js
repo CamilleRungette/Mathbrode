@@ -20,28 +20,10 @@ class Dashboard extends Component {
   this.uploadEventImage = this.uploadEventImage.bind(this);
   this.uploadWorkshopImage = this.uploadWorkshopImage.bind(this)
   this.state = {
-          CreateItemName: '',
-          CreateItemPrice: '',
-          CreateItemSize: '',
-          CreateItemDesc: '',
-          CreateItemShipFee: '',
-          CreateItemPhoto: '',
-          CreateItemFirstPres: false,
-          CreateEventName: '',
-          CreateEventAddress: '',
-          CreateEventDate:'',
-          CreateEventPhoto:'',
-          CreateEventStart: '',
-          CreateEventEnd: '',
-          CreateEventLink:'',
-          CreateEventZipCode: '',
-          CreateEventCity: '',
+          CreateItemName: '', CreateItemPrice: '', CreateItemSize: '', CreateItemDesc: '', CreateItemShipFee: '', CreateItemPhoto: '', CreateItemFirstPres: false,
+          CreateEventName: '', CreateEventAddress: '', CreateEventDate:'', CreateEventPhoto:'', CreateEventStart: '', CreateEventEnd: '', CreateEventLink:'', CreateEventZipCode: '', CreateEventCity: '',
           loading: '',
-          CreateWorkshopTitle: '',
-          CreateWorkshopDesc: '',
-          CreateWorkshopPrice: '',
-          CreateWorkshopDuration: '',
-          CreateWorkshopPhoto: '',
+          CreateWorkshopTitle: '', CreateWorkshopDesc: '', CreateWorkshopPrice: '', CreateWorkshopDuration: '', CreateWorkshopPhoto: '',
           allItems: '',
         }
   }
@@ -64,13 +46,7 @@ class Dashboard extends Component {
     })
     .then(function(data){
       ctx.setState({
-      CreateItemName: '',
-      CreateItemPrice: '',
-      CreateItemSize: '',
-      CreateItemDesc: '',
-      CreateItemShipFee: '',
-      CreateItemPhoto: '',
-      CreateItemFirstPres: false,
+      CreateItemName: '', CreateItemPrice: '', CreateItemSize: '', CreateItemDesc: '', CreateItemShipFee: '', CreateItemPhoto: '', CreateItemFirstPres: false,
 
 })
      console.log("THE STATE ===========>", ctx.state.allItems)
@@ -89,15 +65,7 @@ class Dashboard extends Component {
     })
     .then(function(data){
       ctx.setState({
-        CreateEventName: '',
-        CreateEventAddress: '',
-        CreateEventDate:'',
-        CreateEventPhoto:'',
-        CreateEventStart: '',
-        CreateEventEnd: '',
-        CreateEventLink: '',
-        CreateEventCity: '',
-        CreateEventZipCode: ''
+        CreateEventName: '', CreateEventAddress: '', CreateEventDate:'', CreateEventPhoto:'', CreateEventStart: '', CreateEventEnd: '', CreateEventLink: '', CreateEventCity: '', CreateEventZipCode: ''
       })
     })
   }
@@ -115,11 +83,7 @@ class Dashboard extends Component {
     })
     .then(function(data){
       ctx.setState({
-        CreateWorkshopTitle: '',
-        CreateWorkshopDesc: '',
-        CreateWorkshopPrice: '',
-        CreateWorkshopDuration: '',
-        CreateWorkshopPhoto: '',
+        CreateWorkshopTitle: '', CreateWorkshopDesc: '', CreateWorkshopPrice: '', CreateWorkshopDuration: '', CreateWorkshopPhoto: '',
       })
     })
   }
@@ -176,9 +140,9 @@ class Dashboard extends Component {
 
   
     render(){
-      // if (this.props.adminConnected === false || this.props.adminConnected == null){
-      //    return <Redirect to="/loginadmin" />
-      // }
+      if (this.props.adminConnected === false || this.props.adminConnected == null){
+         return <Redirect to="/loginadmin" />
+      }
       
       return(
 <div style={{fontFamily:"Raleway"}}>
